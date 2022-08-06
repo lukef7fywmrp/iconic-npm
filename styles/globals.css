@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply text-white bg-[url('https://content.rolex.com/dam/homepage/cut-out/homepage-profesional-watches-submariner-m124060-0001-cut-out-text.jpg')] bg-center font-bold uppercase bg-clip-text tracking-wider text-transparent text-4xl p-2 rounded;
+  }
+}
