@@ -10,6 +10,8 @@ module.exports = {
     },
     fontFamily: {
       body: ["Mouse Memoirs", "sans-serif"],
+      fontone: ["Teko", " sans-serif"],
+      author: ["Author", "sans-serif"],
     },
     extend: {
       backgroundImage: {

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&family=Baloo+Bhaijaan+2:wght@400;500&family=Belgrano&family=Teko:wght@300;400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +13,6 @@
 
 @layer components {
   .heading {
-    @apply text-white bg-[url('https://content.rolex.com/dam/homepage/cut-out/homepage-profesional-watches-submariner-m124060-0001-cut-out-text.jpg')] bg-center font-bold uppercase bg-clip-text tracking-wider text-transparent text-4xl p-2 rounded;
+    @apply text-white bg-[url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg?w=2000')] bg-center bg-clip-text tracking-wide text-transparent p-2;
   }
 }
