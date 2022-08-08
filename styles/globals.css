@@ -13,6 +13,9 @@
 
 @layer components {
   .heading {
-    @apply text-white bg-[url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg?w=2000')] bg-center bg-clip-text tracking-wide text-transparent p-2;
+    @apply text-white bg-[url('')] bg-center bg-clip-text tracking-wide text-transparent p-2;
+  }
+  .headerLink {
+    @apply hover:bg-black hover:bg-opacity-50 hover:text-white transition duration-200 tracking-wide rounded-full px-3 py-1;
   }
 }
