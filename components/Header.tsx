@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SearchIcon } from "@heroicons/react/outline";
-import iconiclogo from "../public/iconiclogo.png";
+import iconiclogo from "../public/iconicLogo.png";
 
 function Header() {
   return (
