@@ -12,6 +12,7 @@ module.exports = {
       body: ["Mouse Memoirs", "sans-serif"],
       fontone: ["Teko", " sans-serif"],
       author: ["Author", "sans-serif"],
+      inter: ["Inter", "sans-serif;"],
     },
     extend: {
       backgroundImage: {
