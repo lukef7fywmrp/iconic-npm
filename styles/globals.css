@@ -19,4 +19,8 @@
   .headerLink {
     @apply hover:opacity-100 cursor-pointer opacity-60 hover:bg-opacity-50 transition duration-300 ease-in-out tracking-wide rounded-full px-3 py-1;
   }
+  .landingvidButton {
+    @apply text-white bg-gradient-to-br from-slate-400 to-gray-800 px-14
+     py-3 rounded-md;
+  }
 }
