@@ -1,5 +1,4 @@
-import { SearchIcon } from "@heroicons/react/outline";
-
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 // interface Props {
 //   posts: Post[];
 // }
@@ -21,34 +20,48 @@ function Landing() {
   // console.log(posts);
 
   return (
-    <div className="flex flex-col justify-center font-author tracking-wide w-full h-full items-center">
-      <div className="flex flex-col lg:flex-row text-white px-16 py-20 items-center justify-center w-full h-full">
-        <div className="flex flex-col justify-center items-center space-y-5 w-full text-center lg:text-start lg:items-baseline">
-          <div className="space-y-5 ">
-            <h1 className="text-6xl tracking-wide lg:w-4/5 ">
-              All the libraries you need, made simple.
+    <div className="flex flex-col relative justify-center font-author tracking-wide w-full h-full items-center">
+      <div className="flex flex-col max-w-[1300px] mx-auto text-white px-16 items-center justify-center w-full h-full">
+        {/* Video */}
+        <div className="space-x-10 flex rounded-xl overflow-auto p-8 w-full">
+          <img
+            src="/image0.png"
+            alt=""
+            className="object-contain w-72 absolute -top-10 left-0 -z-20"
+          />
+          <iframe
+            className="flex-1 aspect-video rounded-lg shadow-lg"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            src="https://www.youtube.com/embed/DCTuw2P6DCU"
+          />
+          <img
+            src="https://media.discordapp.net/attachments/923683747382063165/1016621369791885343/cachedImage.png"
+            alt=""
+            className="w-72 object-contain absolute -top-10 right-0 -z-20"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center items-center space-y-10 w-full text-center">
+          <div className="space-y-3 flex flex-col justify-center items-center">
+            <h1 className="text-6xl font-semibold tracking-wide">
+              All the libraries you need, made simple
             </h1>
-            <h2 className="text-lg tracking-wide lg:w-4/5">
+            <h2 className="text-2xl tracking-wide max-w-lg text-gray-500">
               First website with over a hundred different libraries with full
               installation guides.
             </h2>
           </div>
           {/* Search */}
-          <div className="flex bg-[#242323]  rounded-md w-4/5">
+          <div className="flex bg-white/10 rounded-md max-w-lg w-full">
             <div className="flex items-center pl-3">
-              <SearchIcon className="flex-shrink-0 h-6 w-6 text-[#c2c2c2]" />
+              <MagnifyingGlassIcon className="flex-shrink-0 h-6 w-6 text-[#c2c2c2]" />
             </div>
             <input
               type="text"
               placeholder="Search packages"
-              className="bg-transparent outline-none flex-1 p-3 text-xl placeholder-[#c2c2c2] tracking-wide text-white "
+              className="bg-transparent outline-none flex-1 p-3.5 placeholder-[#c2c2c2] tracking-wide text-white "
             />
-          </div>
-        </div>
-        <div className="relative w-3/5 h-4/5 mt-10">
-          <img className="" src="https://bit.ly/3bJnZ5z" alt="" />
-          <div className="absolute top-0 flex items-center justify-center h-full w-full ">
-            <button className="landingvidButton">hi</button>
           </div>
         </div>
       </div>

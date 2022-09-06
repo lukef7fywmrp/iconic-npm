@@ -15,7 +15,7 @@ function Header() {
               layout="fill"
             />
           </div>
-          <p className="text-white font-medium text-xl tracking-wide bg-gradient-to-bl from-purple-400 to-green-300 text-transparent bg-clip-text font-inter">
+          <p className="text-white font-medium text-xl tracking-wide bg-gradient-to-bl from-[#6E4ED9] to-green-300 text-transparent bg-clip-text font-inter">
             Iconic
           </p>
         </div>
