@@ -1,10 +1,10 @@
 import { SearchIcon } from "@heroicons/react/outline";
 
-interface Props {
-  posts: Post[];
-}
+// interface Props {
+//   posts: Post[];
+// }
 
-function Landing({ posts }: Props) {
+function Landing() {
   // const [posts, setPosts] = useState<Post[]>([]);
 
   // Typical react way to fetch data
@@ -18,14 +18,14 @@ function Landing({ posts }: Props) {
   //   fetchPosts();
   // }, []);
 
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <div className="flex flex-col justify-center font-author tracking-wide w-full h-full items-center">
       <div className="flex flex-col lg:flex-row text-white px-16 py-20 items-center justify-center w-full h-full">
         <div className="flex flex-col justify-center items-center space-y-5 w-full text-center lg:text-start lg:items-baseline">
-          <div className="space-y-5">
-            <h1 className="text-6xl tracking-wide">
+          <div className="space-y-5 ">
+            <h1 className="text-6xl tracking-wide lg:w-4/5 ">
               All the libraries you need, made simple.
             </h1>
             <h2 className="text-lg tracking-wide lg:w-4/5">
@@ -33,7 +33,6 @@ function Landing({ posts }: Props) {
               installation guides.
             </h2>
           </div>
-
           {/* Search */}
           <div className="flex bg-[#242323]  rounded-md w-4/5">
             <div className="flex items-center pl-3">
@@ -53,27 +52,6 @@ function Landing({ posts }: Props) {
           </div>
         </div>
       </div>
-      {/* <ul className="max-w-5xl mx-auto gap-8 grid grid-cols-3">
-        {posts.map((post) => (
-          <li
-            className="bg-[#26212C] p-4 py-10 rounded-lg flex flex-col items-center"
-            key={post.id}
-          >
-            <div className="bg-white mb-4 w-24 h-24 rounded-xl flex items-center justify-center">
-              <img
-                src="https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png"
-                alt=""
-                className="object-contain h-20 w-20"
-              />
-            </div>
-            <h4 className="font-medium text-xl text-white">Next JS</h4>
-            <p className="text-gray-500 font-medium">
-              The React Framework for Production
-            </p>
-            <button>Get Started</button>
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 }
