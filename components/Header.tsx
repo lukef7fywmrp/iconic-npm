@@ -10,12 +10,14 @@ function Header() {
           <div className="relative h-8 w-8">
             <Image
               className=""
-              src="/logo.png"
+              src="/iconiclogo.png"
               objectFit="contain"
               layout="fill"
             />
           </div>
-          <p className="text-white font-medium text-xl">Iconic</p>
+          <p className="text-white font-medium text-xl tracking-wide bg-gradient-to-bl from-purple-400 to-green-300 text-transparent bg-clip-text font-inter">
+            Iconic
+          </p>
         </div>
 
         {/* Pricing & Sign in */}
