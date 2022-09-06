@@ -17,7 +17,6 @@ function Header() {
           </div>
           <p className="text-white font-medium text-xl">Iconic</p>
         </div>
-
         {/* Pricing & Sign in */}
         <div className="text-white flex text-sm items-center sm:space-x-6 rounded-lg mt-5 mb-5 lg:mt-0 lg:mb-0 ">
           <Link href="/">

@@ -7,6 +7,19 @@ interface Props {
   posts: Post[];
 }
 
+// const Login = async() => {
+//   if (!user) return
+
+//    await signInWithGoogle().then(() => {
+//     console.log("signed in");
+
+//     // Redirect to the home page
+//     Router.push("/");
+//   }).catch((error) => {
+//     console.log(error);
+//   });
+// }
+
 const Home = ({ posts }: Props) => {
   return (
     <div className="w-full overflow-hidden relative min-h-screen">
@@ -19,7 +32,7 @@ const Home = ({ posts }: Props) => {
         ></link>
       </Head>
       <Header />
-      <Landing posts={posts} />
+      <Landing posts={posts} /> 
     </div>
   );
 };
