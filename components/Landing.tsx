@@ -20,34 +20,24 @@ function Landing() {
   // console.log(posts);
 
   return (
-    <div className="flex flex-col relative justify-center font-author tracking-wide w-full h-full items-center">
+    <div className="flex flex-col justify-center font-author tracking-wide w-full h-full items-center">
       <div className="flex flex-col max-w-[1300px] mx-auto text-white px-16 items-center justify-center w-full h-full">
         {/* Video */}
         <div className="space-x-10 flex rounded-xl overflow-auto p-8 w-full">
-          <img
-            src="/image0.png"
-            alt=""
-            className="object-contain w-72 absolute -top-10 left-0 -z-20"
-          />
           <iframe
             className="flex-1 aspect-video rounded-lg shadow-lg"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             src="https://www.youtube.com/embed/DCTuw2P6DCU"
           />
-          <img
-            src="https://media.discordapp.net/attachments/923683747382063165/1016621369791885343/cachedImage.png"
-            alt=""
-            className="w-72 object-contain absolute -top-10 right-0 -z-20"
-          />
         </div>
 
         <div className="flex flex-col justify-center items-center space-y-10 w-full text-center">
           <div className="space-y-3 flex flex-col justify-center items-center">
-            <h1 className="text-6xl font-semibold tracking-wide">
+            <h1 className="text-6xl tracking-wide">
               All the libraries you need, made simple
             </h1>
-            <h2 className="text-2xl tracking-wide max-w-lg text-gray-500">
+            <h2 className="text-2xl tracking-wide max-w-lg text-[#727272]">
               First website with over a hundred different libraries with full
               installation guides.
             </h2>

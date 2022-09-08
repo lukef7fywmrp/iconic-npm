@@ -3,9 +3,13 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="font-inter sticky top-0 w-full z-50 space-x-2 px-5 py-5 max-w-5xl mx-auto">
-      <div className="flex lg:flex-row lg:justify-between w-full h-full items-center flex-col justify-center">
+    <header className="font-inter sticky flex">
+      <div className="w-2/5">
+        <img src="/imageLeft.png" alt="" className="" />
+      </div>
+      <div className="flex lg:space-x-5 lg:justify-between w-full h-full items-center flex-col justify-center ">
         {/* Logo */}
+
         <div className="flex items-center space-x-2 transition-transform duration-300 ease-out hover:scale-105 cursor-pointer">
           <div className="relative h-8 w-8">
             <Image
@@ -31,6 +35,9 @@ function Header() {
             <button className="headerLink">Log in</button>
           </Link>
         </div>
+      </div>
+      <div className="object-contain w-2/5">
+        <img src="/imageRight.png" alt="" className="" />
       </div>
     </header>
   );

@@ -32,29 +32,29 @@ const Home = ({ posts }: Props) => {
       <Header />
       <Landing />
       <section className="overflow-scroll flex flex-col my-20 space-y-12">
-        <h1 className="text-white text-5xl text-center font-semibold">
+        <h1 className="text-white text-5xl text-center font-">
           Full installation guides for
         </h1>
         <div className="flex">
           <LibraryTop
-            libraryLogo="https://rb.gy/doyffp"
+            libraryLogo="/nextjs.png"
             libraryName="Next.js"
-            libraryDescription="The React Framework for Production"
+            libraryDescription="The React Framework for Production The React Framework for Production"
           />
           <LibraryTop
-            libraryLogo="https://rb.gy/doyffp"
+            libraryLogo="/nextjs.png"
             libraryName="Next.js"
-            libraryDescription="The React Framework for Production"
+            libraryDescription="The React Framework for Production  The React Framework for Production"
           />
           <LibraryTop
-            libraryLogo="https://rb.gy/doyffp"
+            libraryLogo="/nextjs.png"
             libraryName="Next.js"
-            libraryDescription="The React Framework for Production"
+            libraryDescription="The React Framework for Production  The React Framework for Production"
           />
           <LibraryTop
-            libraryLogo="https://rb.gy/doyffp"
+            libraryLogo="/nextjs.png"
             libraryName="Next.js"
-            libraryDescription="The React Framework for Production"
+            libraryDescription="The React Framework for Production  The React Framework for Production"
           />
         </div>
       </section>
