@@ -13,6 +13,7 @@ module.exports = {
       fontone: ["Teko", " sans-serif"],
       author: ["Author", "sans-serif"],
       inter: ["Inter", "sans-serif;"],
+      britney: ["britney", "sans-serif;"],
     },
     extend: {
       backgroundImage: {

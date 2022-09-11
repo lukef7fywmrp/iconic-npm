@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply font-inter bg-[#05010D];
+    @apply font-inter bg-[#010410];
   }
 }
 
@@ -17,7 +17,7 @@
     @apply text-white bg-center bg-clip-text tracking-wide text-transparent p-2;
   }
   .headerLink {
-    @apply hover:opacity-100 cursor-pointer opacity-60 hover:bg-opacity-50 transition duration-300 ease-in-out tracking-wide rounded-full px-3 py-1;
+    @apply hover:text-white/100 cursor-pointer transition duration-300 ease-in-out tracking-wide;
   }
   .landingvidButton {
     @apply text-white bg-gradient-to-br from-purple-500 to-green-500 px-14
@@ -27,3 +27,4 @@
     @apply bg-red-600;
   }
 }
+/* bg-[#070518]  */
