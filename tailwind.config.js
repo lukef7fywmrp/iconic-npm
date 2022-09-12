@@ -9,8 +9,8 @@ module.exports = {
       center: "center 38.1291%",
     },
     fontFamily: {
-      body: ["Mouse Memoirs", "sans-serif"],
-      fontone: ["Teko", " sans-serif"],
+      mouse: ["Mouse Memoirs", "sans-serif"],
+      teko: ["Teko", " sans-serif"],
       author: ["Author", "sans-serif"],
       inter: ["Inter", "sans-serif;"],
       britney: ["britney", "sans-serif;"],

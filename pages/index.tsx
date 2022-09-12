@@ -32,32 +32,37 @@ const Home = ({ posts }: Props) => {
       </Head>
       <Header />
       <Landing />
-      <section className="flex-col my-32 tracking-wide">
-        <div className="text-white text-center font-inter space-y-5">
-          <h1 className="text-5xl ">Explore</h1>
-          <p className="text-2xl text-[#c2c2c2] font-author">
-            Most used libraries we recommend
+      <section className="flex-col my-32 tracking-wide relative">
+        <div className="text-white text-center space-y-5 font-author">
+          <h1 className="text-6xl">Explore</h1>
+          <p className="text-2xl text-[#c2c2c2] ">
+            Most used libraries in today's production
           </p>
         </div>
-        <div className="flex py-16 overflow-scroll gap-5 px-5 lg:px-20">
+        <div className="flex py-16 overflow-scroll gap-8 px-5 lg:px-20">
           <LibraryTop
             libraryLogo="/react.png"
             libraryName="React.js"
             libraryDescription="A JavaScript library for building user interfaces"
+            libraryImage="/jordan.png"
+            libraryAuthor="Jordan Walke"
           />
           <LibraryTop
             libraryLogo="/nextjs.png"
             libraryName="Next.js"
             libraryDescription="The React Framework for Production  The React Framework for Production"
+            libraryImage="/guillermo.png"
+            libraryAuthor="Guillermo Rauch"
           />
           <LibraryTop
             libraryLogo="/tailwind.png"
             libraryName="Tailwind.css"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
           />
         </div>
       </section>
-
       <section className="pb-24">
         <h1 className="text-white text-5xl text-center font-semibold">
           Try it out yourself

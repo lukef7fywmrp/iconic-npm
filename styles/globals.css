@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply font-inter bg-[#010410];
+    @apply font-inter bg-black;
   }
 }
 

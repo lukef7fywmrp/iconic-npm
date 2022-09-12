@@ -3,15 +3,16 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="font-inter sticky flex">
-      <div className="flex w-full h-full justify-between px-10 py-5">
+    <header className="flex">
+      <img className="absolute w-full h-[200vh]" src="/gradientbg.png" alt="" />
+      <div className="flex w-full h-full justify-between px-10 py-3 z-0">
         {/* Logo */}
         <div className="flex items-center space-x-1 transition-transform duration-300 ease-out hover:scale-105 cursor-pointer">
-          <div className="relative w-8 h-8 ">
-            <Image src="/iconiclogo.png" objectFit="contain" layout="fill" />
+          <div className="relative w-12 h-12 ">
+            <Image src="/logo2.png" objectFit="contain" layout="fill" />
           </div>
 
-          <p className="text-white text-3xl tracking-wide font-author bg-gradient-to-r from-[#50afeb] to-[#cd0789] text-transparent bg-clip-text">
+          <p className="text-white text-xl tracking-wider font-author">
             Iconic
           </p>
         </div>
@@ -25,7 +26,7 @@ function Header() {
           </Link>
           <Link href="/">
             <div className="bg-gradient-to-tr from-[#50afeb] to-[#cd0789] p-[1px] rounded-md headerLink">
-              <button className=" bg-[#010410] px-4 py-1 rounded-md">
+              <button className="bg-[#0c0c0c] px-4 py-1 rounded-md">
                 Sign up
               </button>
             </div>
