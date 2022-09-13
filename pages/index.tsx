@@ -64,8 +64,8 @@ const Home = ({ posts }: Props) => {
         </div>
       </section>
       <section className="pb-24">
-        <h1 className="text-white text-5xl text-center font-semibold">
-          Try it out yourself
+        <h1 className="text-white text-6xl text-center  font-author">
+          Libaries
         </h1>
         <div></div>
       </section>

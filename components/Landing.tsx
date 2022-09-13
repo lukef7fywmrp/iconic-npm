@@ -43,14 +43,14 @@ function Landing() {
         </div>
         {/* Search */}
         <div className="bg-gradient-to-tr from-[#50afeb] to-[#cd0789] p-[1px] rounded-md">
-          <div className="flex bg-[#0c0c0c] rounded-md">
+          <div className="flex bg-[#1b0026] rounded-md">
             <div className="flex items-center pl-3">
               <MagnifyingGlassIcon className="flex-shrink-0 h-6 w-6 text-[#c2c2c2]" />
             </div>
             <input
               type="text"
               placeholder="Search packages"
-              className="bg-[#0c0c0c] outline-none flex-1 p-3.5 placeholder-[#c2c2c2] tracking-wide text-white rounded-md"
+              className="bg-[#1b0026] outline-none flex-1 p-3.5 placeholder-[#c2c2c2] tracking-wide text-white rounded-md"
             />
           </div>
         </div>
