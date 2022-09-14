@@ -8,20 +8,23 @@
 
 @layer base {
   body {
-    @apply font-inter bg-black;
+    @apply bg-black font-inter;
   }
 }
 
 @layer components {
   .heading {
-    @apply text-white bg-center bg-clip-text tracking-wide text-transparent p-2;
+    @apply bg-clip-text bg-center p-2 tracking-wide text-white text-transparent;
   }
   .headerLink {
-    @apply hover:text-white/100 cursor-pointer transition duration-300 ease-in-out tracking-wide;
+    @apply cursor-pointer tracking-wide transition duration-300 ease-in-out hover:text-white/100;
   }
   .landingvidButton {
-    @apply text-white bg-gradient-to-br from-purple-500 to-green-500 px-14
-     py-3 rounded-md;
+    @apply rounded-md bg-gradient-to-br from-purple-500 to-green-500 px-14
+     py-3 text-white;
+  }
+  .gradientBorder {
+    @apply rounded-md bg-gradient-to-tr from-[#50afeb] to-[#cd0789];
   }
   .libraryButton {
     @apply bg-red-600;
