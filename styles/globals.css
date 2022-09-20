@@ -29,5 +29,12 @@
   .libraryButton {
     @apply bg-red-600;
   }
+  .gradient {
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(45deg,#50afeb, #cd0789) 1;
+    border-radius: 10px;
+
+  }
 }
 /* bg-[#070518]  */

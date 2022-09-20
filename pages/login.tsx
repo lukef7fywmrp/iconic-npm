@@ -17,8 +17,7 @@ function Login() {
       </Head>
       <Header />
 
-      <main className="mx-auto flex w-full flex-1 flex-col items-center justify-center font-author">
-        <div className=" flex flex-col items-center justify-center space-y-6 rounded-xl bg-black/30 py-16 px-28">
+      <main className="mx-auto flex w-full flex-1 flex-col items-center justify-center font-autho space-y-5">
           <Image src="/logo5.png" width={80} height={80} objectFit="contain" />
 
           <h2 className="text-2xl font-semibold text-white">
@@ -68,7 +67,6 @@ function Login() {
               translateX="translate-x-[25%]"
             />
           </form>
-        </div>
       </main>
     </div>
   );

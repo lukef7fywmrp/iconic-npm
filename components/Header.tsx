@@ -13,7 +13,7 @@ function Header() {
         <Link href="/">
           <div className="flex cursor-pointer items-center space-x-1 transition-transform duration-300 ease-out hover:scale-105">
             <div className="relative h-12 w-12 ">
-              <Image src="/logo2.png" objectFit="contain" layout="fill" />
+              <Image src="/logo5.png" objectFit="contain" layout="fill" />
             </div>
 
             <p className="font-author text-xl tracking-wider text-white">
@@ -32,7 +32,7 @@ function Header() {
           <Button
             text="Log in"
             onClick={() => router.push("/login")}
-            buttonColor="bg-[#1b0026]"
+            buttonColor="bg-[#121212] rounded-md hover:bg-[#171717] transition duration-300"
           />
         </div>
       </div>
