@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Library from "../components/Library";
 import LibraryTop from "../components/LibraryTop";
+import Footer from "../components/Footer";
 
 interface Props {
   posts: Post[];
@@ -42,7 +43,7 @@ const Home = ({ posts }: Props) => {
             Most used libraries in today's production
           </p>
         </div>
-        <div className="flex gap-8 overflow-scroll pt-10 pb-10 px-5 lg:px-20">
+        <div className="flex gap-8 overflow-scroll pt-10 pb-10 px-5 lg:px-20 xl:px-40">
           <LibraryTop
             librarytopLogo="/react.png"
             librarytopName="React.js"
@@ -50,12 +51,14 @@ const Home = ({ posts }: Props) => {
             librarytopImage="/jordan.png"
             librarytopAuthor="Jordan Walke"
           />
+          
           <LibraryTop
             librarytopLogo="/nextjs.png"
             librarytopName="Next.js"
             librarytopDescription="The React Framework for Production"
             librarytopImage="/guillermo.png"
             librarytopAuthor="Guillermo Rauch"
+            className="bg-white"
           />
           <LibraryTop
             librarytopLogo="/tailwind.png"
@@ -67,7 +70,7 @@ const Home = ({ posts }: Props) => {
         </div>
       </section>
       {/* Library */}
-      <section className="py-20 px-5 lg:px-20 tracking-wide relative font-author">
+      <section className="py-20 px-5 lg:px-20 xl:px-40 tracking-wide relative font-author">
         <div>
         <h1 className="text-4xl text-white/90">
           Libraries
@@ -84,7 +87,7 @@ const Home = ({ posts }: Props) => {
             <Library 
             libraryLogo="/redux.png"
             libraryName="Redux"
-            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
+            libraryDescription="Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test."
             libraryImage="/adamwathan.jpeg"
             libraryAuthor="Adam Wathan"/>
             <Library 
@@ -137,6 +140,7 @@ const Home = ({ posts }: Props) => {
             libraryAuthor="Adam Wathan"/>
             </div>
       </section>
+      <Footer />
     </div>
   );
 };

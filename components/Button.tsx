@@ -19,12 +19,13 @@ function Button({
 }: Props) {
   return (
     <div
-      className={`headerLink  gradientBorder flex items-center justify-center rounded-md p-[2px]`}
+      className={`headerLink gradient flex items-center justify-center]`}
       onClick={onClick}
     >
+     
       <button
         className={`group flex w-full items-center justify-center  ${buttonColor} ${
-          textColor ? textColor : "text-white/60"
+          textColor ? textColor : "text-white/70"
         } px-4 py-2  ${buttonPadding}`}
       >
         {text && (
@@ -38,7 +39,7 @@ function Button({
           />
         )}
       </button>
-    </div>
+       </div>
   );
 }
 

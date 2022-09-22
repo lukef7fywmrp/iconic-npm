@@ -24,17 +24,18 @@
      py-3 text-white;
   }
   .gradientBorder {
-    @apply rounded-md bg-gradient-to-tr from-[#50afeb] to-[#cd0789];
-  }
-  .libraryButton {
-    @apply bg-red-600;
+    @apply rounded-md bg-gradient-to-r from-orange-600  to-purple-600;
   }
   .gradient {
     border-width: 2px;
     border-style: solid;
-    border-image: linear-gradient(45deg,#50afeb, #cd0789) 1;
+    border-image: linear-gradient(90deg,#ea580c,#1e1e1e,#9333ea) 1;
     border-radius: 10px;
 
   }
 }
-/* bg-[#070518]  */
+/* Blue/purple */
+/* from-[#50afeb] to-[#cd0789] */
+
+/* Orange/purple */
+/* from-[#ff6600] to-[#c012c9] */
