@@ -1,19 +1,11 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import {useState} from 'react';
+// import {useState} from 'react';
 
 // interface Props {
 //   posts: Post[];
 
 function Landing() {
-   const [isActive, setIsActive] = useState(false);
-
-  const handleClick = () => {
-    // 👇️ toggle
-    setIsActive(current => !current);
-
-    // 👇️ or set to true
-    // setIsActive(true);
-  };
+   
   // const [posts, setPosts] = useState<Post[]>([]);
 
   // Typical react way to fetch data
@@ -30,8 +22,8 @@ function Landing() {
   // console.log(posts);
   
   return (
-    
     <div>
+      {/* Gradient Background */}
       <img
         className="absolute top-0 h-[180vh] w-full"
         src="/gradientbg.png"
@@ -59,19 +51,17 @@ function Landing() {
             </h2>
           </div>
           {/* Search */}
-          <div className="gradient p-0.5 rounded-md">
-            <div className="flex">
+            <div className="flex gradient">
               <div className="flex items-center pl-3 rounded-l-md">
-                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/90" />
+                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/80" />
               </div>
               <input
                 type="text"
                 placeholder="Search packages"
-                className="flex-1 p-3.5 tracking-wide text-white bg-transparent placeholder-white/90 outline-none rounded-r-md"
+                className="flex-1 p-3.5 tracking-wide text-white/80 bg-transparent placeholder-white/80 outline-none rounded-r-md"
               />
             </div>
           </div>
-        </div>
       </div>
     </div>
   );

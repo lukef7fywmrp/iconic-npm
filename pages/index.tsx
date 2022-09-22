@@ -51,14 +51,13 @@ const Home = ({ posts }: Props) => {
             librarytopImage="/jordan.png"
             librarytopAuthor="Jordan Walke"
           />
-          
           <LibraryTop
             librarytopLogo="/nextjs.png"
             librarytopName="Next.js"
             librarytopDescription="The React Framework for Production"
             librarytopImage="/guillermo.png"
             librarytopAuthor="Guillermo Rauch"
-            className="bg-white"
+
           />
           <LibraryTop
             librarytopLogo="/tailwind.png"

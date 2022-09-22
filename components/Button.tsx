@@ -22,10 +22,9 @@ function Button({
       className={`headerLink gradient flex items-center justify-center]`}
       onClick={onClick}
     >
-     
       <button
         className={`group flex w-full items-center justify-center  ${buttonColor} ${
-          textColor ? textColor : "text-white/70"
+          textColor ? textColor : "text-white/80"
         } px-4 py-2  ${buttonPadding}`}
       >
         {text && (
@@ -35,7 +34,7 @@ function Button({
         )}
         {Icon && (
           <Icon
-            className={`h-5 w-5 transition duration-200 group-hover:${translateX} group-hover:text-white `}
+            className={`h-5 w-5 transition duration-200 group-hover:${translateX} group-hover:text-white/80 `}
           />
         )}
       </button>

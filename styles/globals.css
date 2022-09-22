@@ -11,17 +11,9 @@
     @apply bg-black font-inter;
   }
 }
-
 @layer components {
-  .heading {
-    @apply bg-clip-text bg-center p-2 tracking-wide text-white text-transparent;
-  }
   .headerLink {
     @apply cursor-pointer tracking-wide transition duration-300 ease-in-out hover:text-white/100;
-  }
-  .landingvidButton {
-    @apply rounded-md bg-gradient-to-br from-purple-500 to-green-500 px-14
-     py-3 text-white;
   }
   .gradientBorder {
     @apply rounded-md bg-gradient-to-r from-orange-600  to-purple-600;
@@ -31,7 +23,6 @@
     border-style: solid;
     border-image: linear-gradient(90deg,#ea580c,#1e1e1e,#9333ea) 1;
     border-radius: 10px;
-
   }
 }
 /* Blue/purple */
@@ -39,3 +30,6 @@
 
 /* Orange/purple */
 /* from-[#ff6600] to-[#c012c9] */
+
+/* orange/black/purple */
+/* from-[#ea580c] via-[#1e1e1e] to-[#9333ea] */

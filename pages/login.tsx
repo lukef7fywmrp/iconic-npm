@@ -16,11 +16,10 @@ function Login() {
         /wikipedia/commons/a/a7/React-icon.svg
       </Head>
       <Header />
-
       <main className="mx-auto flex w-full flex-1 flex-col items-center justify-center font-autho space-y-5">
           <Image src="/logo5.png" width={80} height={80} objectFit="contain" />
 
-          <h2 className="text-2xl font-semibold text-white">
+          <h2 className="text-2xl font-semibold text-white/80">
             Log in to Iconic
           </h2>
           <div className="flex space-x-4">

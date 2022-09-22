@@ -12,15 +12,15 @@ interface Props {
 function LibraryTop(props: Props) {
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-3 rounded-xl bg-white/5 hover:bg-white/10 transition duration-500 py-5 px-10">
-      <div className="flex flex-col items-center space-y-3 px-10 font-author">
-        <div className="gradientBorder overflow-hidden rounded-3xl duration-300 hover:scale-105 p-[2.5px]">
+      <div className="flex flex-col items-center space-y-3 px-10 font-author group">
+        <div className="gradientBorder rounded-3xl p-[2.5px]">
           <div className="flex h-24 w-24 first-letter:items-center rounded-3xl bg-white p-2 ">
             <Image
              src={props.librarytopLogo} height="100%" width="100%"/>
           </div>
         </div>
         {/* Title */}
-        <h1 className="text-center text-2xl text-white ">
+        <h1 className="text-center text-2xl text-white/90 duration-500 group-hover:scale-105  group-hover:text-white/100">
           {props.librarytopName}
         </h1>
       </div>
