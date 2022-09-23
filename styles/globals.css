@@ -19,10 +19,8 @@
     @apply rounded-md bg-gradient-to-r from-orange-600  to-purple-600;
   }
   .gradient {
-    border-width: 2px;
     border-style: solid;
-    border-image: linear-gradient(90deg,#ea580c,#1e1e1e,#9333ea) 1;
-    border-radius: 10px;
+    border-image: linear-gradient(90deg, #ea580c, #1e1e1e, #9333ea) 1;
   }
 }
 /* Blue/purple */

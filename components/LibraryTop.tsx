@@ -11,12 +11,11 @@ interface Props {
 
 function LibraryTop(props: Props) {
   return (
-    <div className="flex w-full flex-col items-center justify-center space-y-3 rounded-xl bg-white/5 hover:bg-white/10 transition duration-500 py-5 px-10">
-      <div className="flex flex-col items-center space-y-3 px-10 font-author group">
+    <div className="flex w-full cursor-pointer flex-col items-center justify-center space-y-3 rounded-xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
+      <div className="group flex flex-col items-center space-y-3 px-10 font-author">
         <div className="gradientBorder rounded-3xl p-[2.5px]">
-          <div className="flex h-24 w-24 first-letter:items-center rounded-3xl bg-white p-2 ">
-            <Image
-             src={props.librarytopLogo} height="100%" width="100%"/>
+          <div className="flex h-24 w-24 rounded-3xl bg-white p-2 first-letter:items-center ">
+            <Image src={props.librarytopLogo} height="100%" width="100%" />
           </div>
         </div>
         {/* Title */}
@@ -48,9 +47,9 @@ function LibraryTop(props: Props) {
       <div className="py-5">
         <div className="gradientBorder group p-[2px] text-lg">
           <button className="group relative inline-flex items-center justify-start overflow-hidden rounded-md bg-[#171717] px-3 py-1 font-normal">
-            <span className="absolute left-0 top-0 h-32 w-32 translate-x-12 -translate-y-2 rotate-45 bg-gradient-to-tr from-orange-600  to-purple-600 from opacity-[0%]"></span>
+            <span className="from absolute left-0 top-0 h-32 w-32 translate-x-12 -translate-y-2 rotate-45 bg-gradient-to-tr  from-orange-600 to-purple-600 opacity-[0%]"></span>
             <span className="absolute top-0 left-0 -mt-1 h-48 w-48 -translate-x-56 -translate-y-24 rotate-45 bg-gradient-to-tr from-orange-600  to-purple-600 opacity-100 transition-all duration-500 ease-in-out group-hover:-translate-x-8"></span>
-            <span className="relative flex w-full items-center text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white tracking-wide">
+            <span className="relative flex w-full items-center text-left tracking-wide text-white transition-colors duration-200 ease-in-out group-hover:text-white">
               Install Library
             </span>
             <span className="absolute inset-0 rounded-md "></span>

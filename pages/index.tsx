@@ -33,17 +33,17 @@ const Home = ({ posts }: Props) => {
       </Head>
       <Header />
       <div className="my-20 lg:my-32">
-      <Landing/>
+        <Landing />
       </div>
       {/* Top Library */}
-      <section className="relative flex-col tracking-wide py-20 font-author">
+      <section className="relative flex-col py-20 font-author tracking-wide">
         <div className="space-y-2 text-center font-author text-white/90">
           <h1 className="text-6xl">Explore</h1>
           <p className="text-2xl text-white/50">
             Most used libraries in today's production
           </p>
         </div>
-        <div className="flex gap-8 overflow-scroll pt-10 pb-10 px-5 lg:px-20 xl:px-40">
+        <div className="scrollbar-hide  flex gap-8 overflow-scroll px-5 pt-10 pb-10 lg:px-20 xl:px-40">
           <LibraryTop
             librarytopLogo="/react.png"
             librarytopName="React.js"
@@ -57,7 +57,6 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="The React Framework for Production"
             librarytopImage="/guillermo.png"
             librarytopAuthor="Guillermo Rauch"
-
           />
           <LibraryTop
             librarytopLogo="/tailwind.png"
@@ -69,75 +68,86 @@ const Home = ({ posts }: Props) => {
         </div>
       </section>
       {/* Library */}
-      <section className="py-20 px-5 lg:px-20 xl:px-40 tracking-wide relative font-author">
+      <section className="relative py-20 px-5 font-author tracking-wide lg:px-20 xl:px-40">
         <div>
-        <h1 className="text-4xl text-white/90">
-          Libraries
-        </h1>
-        <p className="text-lg text-white/50 ">Explore the library and discover the incredible work of our community</p>
+          <h1 className="text-4xl text-white/90">Libraries</h1>
+          <p className="text-lg text-white/50 ">
+            Explore the library and discover the incredible work of our
+            community
+          </p>
         </div>
-        <div className="gap-3 grid md:grid-cols-2 pb-10 pt-5 ">
-        <Library 
+        <div className="grid gap-3 pb-10 pt-5 md:grid-cols-2 ">
+          <Library
             libraryLogo="/firebase.png"
             libraryName="Firebase"
             libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/redux.png"
             libraryName="Redux"
             libraryDescription="Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test."
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/tailwind.png"
             libraryName="Tailwind.css"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/tailwind.png"
             libraryName="Tailwind.css"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-             <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/firebase.png"
             libraryName="Firebase"
             libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/redux.png"
             libraryName="Redux"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-             <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/firebase.png"
             libraryName="Firebase"
             libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/redux.png"
             libraryName="Redux"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-             <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/firebase.png"
             libraryName="Firebase"
             libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            <Library 
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/redux.png"
             libraryName="Redux"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
             libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"/>
-            </div>
+            libraryAuthor="Adam Wathan"
+          />
+        </div>
       </section>
       <Footer />
     </div>
