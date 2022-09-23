@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Library from "../components/Library";
 import LibraryTop from "../components/LibraryTop";
+import Footer from "../components/Footer";
 
 interface Props {
   posts: Post[];
@@ -31,44 +32,124 @@ const Home = ({ posts }: Props) => {
         /wikipedia/commons/a/a7/React-icon.svg
       </Head>
       <Header />
-      <Landing />
-      <section className="relative my-32 flex-col tracking-wide">
-        <div className="space-y-5 text-center font-author text-white">
+      <div className="my-20 lg:my-32">
+        <Landing />
+      </div>
+      {/* Top Library */}
+      <section className="relative flex-col py-20 font-author tracking-wide">
+        <div className="space-y-2 text-center font-author text-white/90">
           <h1 className="text-6xl">Explore</h1>
-          <p className="text-2xl text-[#c2c2c2] ">
+          <p className="text-2xl text-white/50">
             Most used libraries in today's production
           </p>
         </div>
-        <div className="flex gap-8 overflow-scroll py-16 px-5 lg:px-20">
+        <div className="scrollbar-hide  flex gap-8 overflow-scroll px-5 pt-10 pb-10 lg:px-20 xl:px-40">
           <LibraryTop
-            libraryLogo="/react.png"
-            libraryName="React.js"
-            libraryDescription="A JavaScript library for building user interfaces"
-            libraryImage="/jordan.png"
-            libraryAuthor="Jordan Walke"
+            librarytopLogo="/react.png"
+            librarytopName="React.js"
+            librarytopDescription="A JavaScript library for building user interfaces"
+            librarytopImage="/jordan.png"
+            librarytopAuthor="Jordan Walke"
           />
           <LibraryTop
-            libraryLogo="/nextjs.png"
-            libraryName="Next.js"
-            libraryDescription="The React Framework for Production  The React Framework for Production"
-            libraryImage="/guillermo.png"
-            libraryAuthor="Guillermo Rauch"
+            librarytopLogo="/nextjs.png"
+            librarytopName="Next.js"
+            librarytopDescription="The React Framework for Production"
+            librarytopImage="/guillermo.png"
+            librarytopAuthor="Guillermo Rauch"
           />
           <LibraryTop
+            librarytopLogo="/tailwind.png"
+            librarytopName="Tailwind.css"
+            librarytopDescription="Rapidly build modern websites without ever leaving your HTML."
+            librarytopImage="/adamwathan.jpeg"
+            librarytopAuthor="Adam Wathan"
+          />
+        </div>
+      </section>
+      {/* Library */}
+      <section className="relative py-20 px-5 font-author tracking-wide lg:px-20 xl:px-40">
+        <div>
+          <h1 className="text-4xl text-white/90">Libraries</h1>
+          <p className="text-lg text-white/50 ">
+            Explore the library and discover the incredible work of our
+            community
+          </p>
+        </div>
+        <div className="grid gap-3 pb-10 pt-5 md:grid-cols-2 ">
+          <Library
+            libraryLogo="/firebase.png"
+            libraryName="Firebase"
+            libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/redux.png"
+            libraryName="Redux"
+            libraryDescription="Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test."
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
             libraryLogo="/tailwind.png"
             libraryName="Tailwind.css"
             libraryDescription="Rapidly build modern websites without ever leaving your HTML."
             libraryImage="/adamwathan.jpeg"
             libraryAuthor="Adam Wathan"
           />
+          <Library
+            libraryLogo="/tailwind.png"
+            libraryName="Tailwind.css"
+            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/firebase.png"
+            libraryName="Firebase"
+            libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/redux.png"
+            libraryName="Redux"
+            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/firebase.png"
+            libraryName="Firebase"
+            libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/redux.png"
+            libraryName="Redux"
+            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/firebase.png"
+            libraryName="Firebase"
+            libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
+          <Library
+            libraryLogo="/redux.png"
+            libraryName="Redux"
+            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
+            libraryImage="/adamwathan.jpeg"
+            libraryAuthor="Adam Wathan"
+          />
         </div>
       </section>
-      <section className="pb-24">
-        <h1 className="text-center font-author text-6xl  text-white">
-          Libraries
-        </h1>
-        <div></div>
-      </section>
+      <Footer />
     </div>
   );
 };

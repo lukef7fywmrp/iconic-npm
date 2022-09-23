@@ -1,47 +1,60 @@
 import React from "react";
+import Image from "next/image";
 
 interface Props {
-  posts: Post[];
+  libraryLogo: string;
+  libraryName: string;
+  libraryDescription: string;
+  libraryImage: string;
+  libraryAuthor: string;
 }
 
-// const [posts, setPosts] = useState<Post[]>([]);
-
-// Typical react way to fetch data
-// useEffect(() => {
-//   const fetchPosts = async () => {
-//     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-//     const data = await res.json();
-//     setPosts(data);
-//   };
-
-//   fetchPosts();
-// }, []);
-
-// console.log(posts);
-
-function Library({ posts }: Props) {
+function Library(props: Props) {
   return (
-    <ul className="max-w-5xl mx-auto gap-8 grid md:grid-cols-2 px-10 grid-cols-1 ">
-      {posts.map((post) => (
-        <li
-          className="bg-[#26212C] p-4 py-10 rounded-lg flex flex-col items-center"
-          key={post.id}
-        >
-          <div className="bg-white mb-4 w-24 h-24 rounded-xl flex items-center justify-center">
-            <img
-              src="https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png"
-              alt=""
-              className="object-contain h-20 w-20"
-            />
+    <div className="flex w-full cursor-pointer flex-col justify-center space-y-3 rounded-xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
+      <div className="flex w-full flex-row items-center justify-between">
+        <div className="group flex items-center space-x-2">
+          <div className="gradientBorder rounded-2xl p-[2.5px]">
+            <div className="flex h-16 w-16 items-center rounded-2xl bg-white p-2">
+              <Image src={props.libraryLogo} height="100%" width="100%" />
+            </div>
           </div>
-          <h4 className="font-medium text-xl text-white">Next JS</h4>
-          <p className="text-gray-500 font-medium">
-            The React Framework for Production
-          </p>
-          <button className="libraryButton">Get Started</button>
-        </li>
-      ))}
-    </ul>
+          {/* Title */}
+          <h1 className="text-center text-xl text-white/90 transition duration-500 group-hover:scale-105 group-hover:text-white/100">
+            {props.libraryName}
+          </h1>
+        </div>
+        {/* Button */}
+        <div className="gradientBorder group p-[2px] text-lg">
+          <button className="group relative inline-flex items-center justify-start overflow-hidden rounded-md bg-[#171717] px-3 py-1 font-normal">
+            <span className="from absolute left-0 top-0 h-32 w-32 translate-x-12 -translate-y-2 rotate-45 bg-gradient-to-tr from-orange-600 to-purple-600 opacity-[0%]"></span>
+            <span className="absolute top-0 left-0 -mt-1 h-48 w-48 -translate-x-56 -translate-y-24 rotate-45 bg-gradient-to-tr from-orange-600  to-purple-600 opacity-100 transition-all duration-500 ease-in-out group-hover:-translate-x-8"></span>
+            <span className="relative flex max-w-sm items-center text-left tracking-wide text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+              Install
+            </span>
+            <span className="absolute inset-0 rounded-md "></span>
+          </button>
+        </div>
+      </div>
+      {/* Description */}
+      <div className="font-inter">
+        <p className="text-sm text-white/50">{props.libraryDescription}</p>
+      </div>
+      {/* Author */}
+      <div className="group flex space-x-2 py-2 font-inter text-xs">
+        <div className="relative h-7 w-7">
+          <Image
+            className="rounded-full"
+            src={props.libraryImage}
+            objectFit="contain"
+            layout="fill"
+          />
+        </div>
+        <button className="text-[#a6a6a6] duration-500 group-hover:text-white">
+          {props.libraryAuthor}
+        </button>
+      </div>
+    </div>
   );
 }
 

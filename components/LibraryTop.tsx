@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 interface Props {
-  libraryLogo: string;
-  libraryName: string;
-  libraryDescription: string;
-  libraryImage: string;
-  libraryAuthor: string;
+  librarytopLogo: string;
+  librarytopName: string;
+  librarytopDescription: string;
+  librarytopImage: string;
+  librarytopAuthor: string;
 }
 
 function LibraryTop(props: Props) {
@@ -15,32 +15,32 @@ function LibraryTop(props: Props) {
       <div className="flex flex-col items-center space-y-3 px-10 font-author">
         <div className="gradientBorder overflow-hidden rounded-3xl p-[2.5px] duration-300 hover:scale-105">
           <div className="flex h-24 w-24 items-center rounded-3xl bg-white p-2 ">
-            <img src={props.libraryLogo} height="100%" width="100%" />
+            <img src={props.librarytopLogo} height="100%" width="100%" />
           </div>
         </div>
         {/* Title */}
-        <h1 className="text-center text-2xl text-white ">
-          {props.libraryName}
+        <h1 className="text-center text-2xl text-white/90 duration-500 group-hover:scale-105  group-hover:text-white/100">
+          {props.librarytopName}
         </h1>
       </div>
       {/* Description */}
       <div className="">
-        <p className="h-16 w-56 text-center text-sm text-[#ffffff66]">
-          {props.libraryDescription}
+        <p className="h-16 w-56 text-center font-inter text-sm text-white/40">
+          {props.librarytopDescription}
         </p>
       </div>
       {/* Author */}
-      <div className="group flex space-x-2 py-2 font-inter text-xs duration-200 hover:scale-105">
+      <div className="group flex space-x-2 py-2 font-inter text-xs">
         <div className="relative h-7 w-7">
           <Image
             className="rounded-full"
-            src={props.libraryImage}
+            src={props.librarytopImage}
             objectFit="contain"
             layout="fill"
           />
         </div>
-        <button className="text-[#a6a6a6] duration-200 group-hover:text-white">
-          {props.libraryAuthor}
+        <button className="text-[#a6a6a6] duration-500 group-hover:text-white">
+          {props.librarytopAuthor}
         </button>
       </div>
       {/* Button */}
@@ -52,7 +52,7 @@ function LibraryTop(props: Props) {
             <span className="relative flex w-full items-center text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">
               Explore More
             </span>
-            <span className="absolute inset-0 rounded-md border-2 border-white"></span>
+            <span className="absolute inset-0 rounded-md "></span>
           </button>
         </div>
       </div>
