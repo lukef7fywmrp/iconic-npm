@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineMenu } from "react-icons/Ai";
+import { AiOutlineMenu } from "react-icons/ai";
 
 function Header() {
   return (
