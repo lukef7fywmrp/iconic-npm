@@ -81,22 +81,22 @@ const Home = ({ posts }: Props) => {
             libraryLogo="/firebase.png"
             libraryName="Firebase"
             libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
-            libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"
+            libraryImage="/jamestamplin.jpeg"
+            libraryAuthor="James Tamplin"
           />
           <Library
             libraryLogo="/redux.png"
             libraryName="Redux"
             libraryDescription="Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test."
-            libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"
+            libraryImage="/danabramov.jpeg"
+            libraryAuthor="Dan Abramov"
           />
           <Library
-            libraryLogo="/tailwind.png"
-            libraryName="Tailwind.css"
-            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
-            libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"
+            libraryLogo="/Nextauth.png"
+            libraryName="NextAuth.js"
+            libraryDescription="Authentication for Next.js"
+            libraryImage="/iaincollins.jpeg"
+            libraryAuthor="Iain Collins"
           />
           <Library
             libraryLogo="/tailwind.png"

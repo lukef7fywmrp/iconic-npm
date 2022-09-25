@@ -4,8 +4,15 @@ import Header from "../components/Header";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FiChevronRight } from "react-icons/fi";
+import { useState } from "react";
+import Link from "next/link";
 
 function Login() {
+  const [validEmail, setvalidEmail] = useState(true);
+  const validEmailClass =
+    "bg-white rounded border border-gray-300 p-3 focus:border focus:border-blue-600 my-2 w-full";
+  const invalidEmailClass =
+    "bg-white rounded border border-gray-300 p-3 focus:border border-red-600 my-2 w-full";
   return (
     <div className="flex min-h-screen flex-col bg-[#050005] font-author">
       <Head>
@@ -31,11 +38,11 @@ function Login() {
         <small className="text-lg text-white/40">or</small>
         {/* Email */}
         <div className="w-8/12 space-y-5 md:w-5/12">
-          <div className="">
+          <div className="relative">
             <input
               type="email"
               placeholder="Email address"
-              className="w-full rounded-md bg-white/5 py-3 px-2 text-white/80 placeholder-white/40 outline-none"
+              className="validEmail? focus:gradient w-full rounded-md  border-2 border-white/5 bg-white/5 py-3 px-2 text-white/80 placeholder-white/40 outline-none focus:relative"
             />
           </div>
           <div className="">
@@ -49,12 +56,16 @@ function Login() {
           <div className="flex w-full justify-center rounded-md bg-white/80 py-3 text-black/80 transition duration-500 hover:bg-white/100 hover:text-black/100">
             <h1>Log in</h1>
           </div>
-          <div className="hover:gradient group flex items-center justify-center space-x-1 rounded-md border-2 border-white/5 py-3 px-2 transition duration-500">
-            <h1 className="text-white/40  group-hover:text-white/100">
-              Don't have an account? Sign up
-            </h1>
-            <FiChevronRight className="text-white/40 transition duration-500 group-hover:translate-x-2 group-hover:text-white/100" />
-          </div>
+          <Link href="/signup">
+            <div className="relative">
+              <div className="hover:before:gradient  group flex items-center justify-center space-x-1 rounded-md border-2 border-white/5 py-3 px-2 transition duration-500">
+                <h1 className="text-white/40  group-hover:text-white/100">
+                  Don't have an account? Sign up
+                </h1>
+                <FiChevronRight className="text-white/40 transition duration-500 group-hover:translate-x-2 group-hover:text-white/100" />
+              </div>
+            </div>
+          </Link>
         </div>
       </main>
     </div>

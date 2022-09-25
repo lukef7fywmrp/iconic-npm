@@ -1,10 +1,15 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-// import {useState} from 'react';
+import { useState } from "react";
 
 // interface Props {
-//   posts: Post[];
+//   posts: Post[];]
 
 function Landing() {
+  const [validEmail, setvalidEmail] = useState(true);
+  const validEmailClass =
+    "bg-white rounded border border-gray-300 p-3 focus:border focus:border-blue-600 my-2 w-full";
+  const invalidEmailClass =
+    "bg-white rounded border border-gray-300 p-3 focus:border border-red-600 my-2 w-full";
   // const [posts, setPosts] = useState<Post[]>([]);
 
   // Typical react way to fetch data
@@ -28,7 +33,7 @@ function Landing() {
         src="/gradientbg.png"
         alt=""
       />
-      <div className="relative mx-auto flex h-full w-full max-w-[2000px] flex-col items-center justify-center space-y-10 px-8 font-author tracking-wide sm:px-20 lg:flex-row-reverse lg:gap-5">
+      <div className="relative mx-auto flex h-full w-full max-w-[2000px] flex-col items-center justify-center space-y-10 px-8 font-author tracking-wide sm:px-20 lg:flex-row-reverse lg:gap-5 xl:px-40">
         {/* Video */}
         <div className="gradientBorder flex w-full space-x-10 overflow-auto rounded-2xl p-[2.5px]">
           <iframe
@@ -50,15 +55,17 @@ function Landing() {
             </h2>
           </div>
           {/* Search */}
-          <div className="gradient flex cursor-pointer border-2">
-            <div className="flex items-center rounded-l-md pl-3">
-              <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/80" />
+          <div className="relative">
+            <div className="before:gradient flex cursor-pointer ">
+              <div className="flex items-center rounded-l-md pl-3">
+                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/80" />
+              </div>
+              <input
+                type="text"
+                placeholder="Search packages"
+                className="relative flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/80 outline-none "
+              />
             </div>
-            <input
-              type="text"
-              placeholder="Search packages"
-              className="flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/80 outline-none"
-            />
           </div>
         </div>
       </div>

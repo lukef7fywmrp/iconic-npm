@@ -20,19 +20,13 @@ function Header() {
         {/* Pricing & Sign in */}
         <div className="hidden items-center space-x-6 text-sm text-white/80 sm:flex">
           <Link href="/">
-            <p className="headerLink border-2 border-transparent px-3 py-1">
-              Pricing
-            </p>
+            <p className="headerLink">Pricing</p>
           </Link>
           <Link href="/">
-            <p className="headerLink border-2 border-transparent px-3 py-1">
-              Documentation
-            </p>
+            <p className="headerLink">Documentation</p>
           </Link>
           <Link href="/login">
-            <button className="hover:gradient headerLink border-2 border-transparent px-3 py-1 transition">
-              Log in
-            </button>
+            <button className="headerLink">Log in</button>
           </Link>
         </div>
         <div className="flex items-center text-white/80 transition duration-200 hover:scale-105 hover:text-white/100 sm:hidden">
