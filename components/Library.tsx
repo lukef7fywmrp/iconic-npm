@@ -39,11 +39,11 @@ function Library(props: Props) {
         </div>
       </div>
       {/* Description */}
-      <div className="font-inter">
-        <p className="text-sm text-white/50">{props.libraryDescription}</p>
-      </div>
+      <p className="font-inter text-sm text-white/40">
+        {props.libraryDescription}
+      </p>
       {/* Author */}
-      <div className="group flex space-x-2 py-2 font-inter text-xs">
+      <div className="flex space-x-2 py-2 font-inter text-xs">
         <div className="relative h-7 w-7">
           <Image
             className="rounded-full"
@@ -52,7 +52,7 @@ function Library(props: Props) {
             layout="fill"
           />
         </div>
-        <button className="text-[#a6a6a6] duration-500 group-hover:text-white">
+        <button className="text-white/50 duration-500 hover:text-white/90">
           {props.libraryAuthor}
         </button>
       </div>

@@ -5,11 +5,6 @@ import { useState } from "react";
 //   posts: Post[];]
 
 function Landing() {
-  const [validEmail, setvalidEmail] = useState(true);
-  const validEmailClass =
-    "bg-white rounded border border-gray-300 p-3 focus:border focus:border-blue-600 my-2 w-full";
-  const invalidEmailClass =
-    "bg-white rounded border border-gray-300 p-3 focus:border border-red-600 my-2 w-full";
   // const [posts, setPosts] = useState<Post[]>([]);
 
   // Typical react way to fetch data
@@ -46,24 +41,24 @@ function Landing() {
         {/* Description */}
         <div className="flex w-full flex-col items-center justify-center space-y-10 text-center lg:items-start lg:text-start">
           <div className="flex flex-col items-center justify-center space-y-5">
-            <h1 className="max-w-lg text-5xl font-light tracking-wide text-white/90 sm:text-6xl">
+            <h1 className="max-w-lg text-5xl font-light text-white/90 sm:text-6xl">
               All the libraries you need, made simple
             </h1>
-            <h2 className="max-w-lg text-xl tracking-wide text-white/50 sm:text-2xl">
+            <h2 className="max-w-lg text-xl text-white/40 sm:text-2xl">
               First website with over a hundred different libraries with full
               installation guides.
             </h2>
           </div>
           {/* Search */}
-          <div className="relative">
-            <div className="before:gradient flex cursor-pointer ">
+          <div className="">
+            <div className="flex cursor-pointer rounded-xl border-2 border-white/10">
               <div className="flex items-center rounded-l-md pl-3">
-                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/80" />
+                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/40" />
               </div>
               <input
                 type="text"
                 placeholder="Search packages"
-                className="relative flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/80 outline-none "
+                className="focus:gradient flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/40 focus:relative focus:outline-none"
               />
             </div>
           </div>

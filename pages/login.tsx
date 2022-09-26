@@ -8,11 +8,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 function Login() {
-  const [validEmail, setvalidEmail] = useState(true);
-  const validEmailClass =
-    "bg-white rounded border border-gray-300 p-3 focus:border focus:border-blue-600 my-2 w-full";
-  const invalidEmailClass =
-    "bg-white rounded border border-gray-300 p-3 focus:border border-red-600 my-2 w-full";
   return (
     <div className="flex min-h-screen flex-col bg-[#050005] font-author">
       <Head>
@@ -38,11 +33,11 @@ function Login() {
         <small className="text-lg text-white/40">or</small>
         {/* Email */}
         <div className="w-8/12 space-y-5 md:w-5/12">
-          <div className="relative">
+          <div className="">
             <input
               type="email"
               placeholder="Email address"
-              className="validEmail? focus:gradient w-full rounded-md  border-2 border-white/5 bg-white/5 py-3 px-2 text-white/80 placeholder-white/40 outline-none focus:relative"
+              className="w-full rounded-lg border-transparent bg-white/5 py-3 px-2 text-white/80 placeholder-white/40 outline-none "
             />
           </div>
           <div className="">

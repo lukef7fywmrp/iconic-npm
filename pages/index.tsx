@@ -36,10 +36,10 @@ const Home = ({ posts }: Props) => {
         <Landing />
       </div>
       {/* Top Library */}
-      <section className="relative flex-col py-20 font-author tracking-wide">
-        <div className="space-y-2 text-center font-author text-white/90">
-          <h1 className="text-6xl">Explore</h1>
-          <p className="text-2xl text-white/50">
+      <section className="relative flex-col py-20 font-author">
+        <div className="space-y-2 text-center text-white">
+          <h1 className="text-5xl lg:text-6xl">Explore</h1>
+          <p className="text-xl text-white/40 lg:text-2xl">
             Most used libraries in today's production
           </p>
         </div>
@@ -68,10 +68,10 @@ const Home = ({ posts }: Props) => {
         </div>
       </section>
       {/* Library */}
-      <section className="relative py-20 px-5 font-author tracking-wide lg:px-20 xl:px-40">
+      <section className="relative px-5 font-author lg:px-20 xl:px-40">
         <div>
-          <h1 className="text-4xl text-white/90">Libraries</h1>
-          <p className="text-lg text-white/50 ">
+          <h1 className="text-4xl text-white">Libraries</h1>
+          <p className=" text-white/40 lg:text-lg">
             Explore the library and discover the incredible work of our
             community
           </p>
