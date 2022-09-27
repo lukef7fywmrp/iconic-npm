@@ -24,7 +24,7 @@ function Landing() {
     <div>
       {/* Gradient Background */}
       <img
-        className="absolute top-0 h-[200vh] w-full"
+        className="absolute top-0 h-[200vh] w-full lg:h-[150vh]"
         src="/gradientbg.png"
         alt=""
       />
@@ -41,7 +41,7 @@ function Landing() {
         {/* Description */}
         <div className="flex w-full flex-col items-center justify-center space-y-10 text-center lg:items-start lg:text-start">
           <div className="flex flex-col items-center justify-center space-y-5">
-            <h1 className="max-w-lg text-5xl font-light text-white/90 sm:text-6xl">
+            <h1 className="max-w-lg font-author text-5xl font-light  text-white/90 sm:text-6xl">
               All the libraries you need, made simple
             </h1>
             <h2 className="max-w-lg text-xl text-white/40 sm:text-2xl">
@@ -50,15 +50,15 @@ function Landing() {
             </h2>
           </div>
           {/* Search */}
-          <div className="">
-            <div className="flex cursor-pointer rounded-xl border-2 border-white/10">
-              <div className="flex items-center rounded-l-md pl-3">
-                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/40" />
+          <div className="relative">
+            <div className="before:gradients flex cursor-pointer rounded-xl">
+              <div className="flex items-center rounded-l-md pl-3 ">
+                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/80 focus:text-white" />
               </div>
               <input
                 type="text"
                 placeholder="Search packages"
-                className="focus:gradient flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/40 focus:relative focus:outline-none"
+                className="relative flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/80 outline-none"
               />
             </div>
           </div>

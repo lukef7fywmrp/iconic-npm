@@ -33,7 +33,7 @@ function Library(props: Props) {
               <span className="relative flex max-w-sm items-center text-left tracking-wide text-white transition-colors duration-200 ease-in-out group-hover:text-white">
                 Install
               </span>
-              <span className="absolute inset-0 rounded-md "></span>
+              <span className="absolute inset-0 rounded-md"></span>
             </button>
           </div>
         </div>

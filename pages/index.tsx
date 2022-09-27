@@ -5,6 +5,7 @@ import Landing from "../components/Landing";
 import Library from "../components/Library";
 import LibraryTop from "../components/LibraryTop";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 interface Props {
   posts: Post[];
@@ -50,6 +51,7 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="A JavaScript library for building user interfaces"
             librarytopImage="/jordan.png"
             librarytopAuthor="Jordan Walke"
+            librarytopLink="/Reactjs"
           />
           <LibraryTop
             librarytopLogo="/nextjs.png"
@@ -57,6 +59,7 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="The React Framework for Production"
             librarytopImage="/guillermo.png"
             librarytopAuthor="Guillermo Rauch"
+            librarytopLink=""
           />
           <LibraryTop
             librarytopLogo="/tailwind.png"
@@ -64,6 +67,7 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="Rapidly build modern websites without ever leaving your HTML."
             librarytopImage="/adamwathan.jpeg"
             librarytopAuthor="Adam Wathan"
+            librarytopLink=""
           />
         </div>
       </section>

@@ -21,7 +21,7 @@ function Login() {
         {/* Title */}
         <h1 className="text-4xl text-white">Sign in</h1>
         {/* Buttons */}
-        <div className="flex w-8/12 space-x-4 text-white/50 md:w-5/12">
+        <div className="flex w-full max-w-md space-x-4 px-5 text-white/50 sm:px-0 ">
           <div className="flex w-full justify-center rounded-md bg-white/5 p-3 transition duration-500 hover:bg-white/10">
             <FaGithub className="" />
           </div>
@@ -32,12 +32,14 @@ function Login() {
         {/* or */}
         <small className="text-lg text-white/40">or</small>
         {/* Email */}
-        <div className="w-8/12 space-y-5 md:w-5/12">
+        <div className="max-w w-full max-w-md space-y-5 px-5 sm:px-0 ">
           <div className="">
             <input
               type="email"
               placeholder="Email address"
-              className="w-full rounded-lg border-transparent bg-white/5 py-3 px-2 text-white/80 placeholder-white/40 outline-none "
+              className=" 
+              w-full rounded-lg border-transparent bg-white/5 py-3 px-5 text-white/80 placeholder-white/40  outline-none focus:ring-1 focus:ring-purple-600
+              focus:invalid:ring-pink-600"
             />
           </div>
           <div className="">
@@ -45,7 +47,7 @@ function Login() {
               type="password"
               placeholder="Password"
               autoComplete="current-password"
-              className="w-full rounded-md bg-white/5 py-3 px-2 text-white/80 placeholder-white/40 outline-none"
+              className="w-full rounded-md bg-white/5 py-3 px-5 text-white/80 placeholder-white/40 outline-none"
             />
           </div>
           <div className="flex w-full justify-center rounded-md bg-white/80 py-3 text-black/80 transition duration-500 hover:bg-white/100 hover:text-black/100">
@@ -53,8 +55,8 @@ function Login() {
           </div>
           <Link href="/signup">
             <div className="relative">
-              <div className="hover:before:gradient  group flex items-center justify-center space-x-1 rounded-md border-2 border-white/5 py-3 px-2 transition duration-500">
-                <h1 className="text-white/40  group-hover:text-white/100">
+              <div className="before:gradients  group flex items-center justify-center space-x-1 rounded-md border-2 border-white/5 py-3 px-2 transition duration-500">
+                <h1 className="text-white/40 transition duration-500 group-hover:text-white/100">
                   Don't have an account? Sign up
                 </h1>
                 <FiChevronRight className="text-white/40 transition duration-500 group-hover:translate-x-2 group-hover:text-white/100" />

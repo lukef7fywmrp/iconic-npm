@@ -1,37 +1,67 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineMenu } from "react-icons/ai";
+import { VscMenu, VscChromeClose } from "react-icons/vsc";
+
+import { useState } from "react";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="flex">
       <div className="z-10 flex h-full w-full justify-between px-10 py-3">
         {/* Logo */}
         <Link href="/">
-          <div className="flex cursor-pointer items-center transition-transform duration-300 ease-out  hover:scale-105">
-            <div className="relative h-12 w-12 ">
-              <Image src="/logo8.png" objectFit="contain" layout="fill" />
+          <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
+            <div className="relative h-8 w-8">
+              <Image src="/Logo2.png" objectFit="contain" layout="fill" />
             </div>
-            <p className="font-author text-xl tracking-wider text-white/90">
+            <p className="font-author text-lg tracking-wider text-white/90">
               Iconic
             </p>
           </div>
         </Link>
-        {/* Pricing & Sign in */}
-        <div className="hidden items-center space-x-6 text-sm text-white/80 sm:flex">
-          <Link href="/">
-            <p className="headerLink">Pricing</p>
-          </Link>
-          <Link href="/">
-            <p className="headerLink">Documentation</p>
-          </Link>
-          <Link href="/login">
-            <button className="headerLink">Log in</button>
-          </Link>
+        {/* Header links and menu */}
+        <div className="flex items-center">
+          <div className="hidden space-x-6 text-sm text-white/80 sm:flex">
+            <Link href="/">
+              <p className="headerLink">Pricing</p>
+            </Link>
+            <Link href="/">
+              <p className="headerLink">Documentation</p>
+            </Link>
+            <Link href="/login">
+              <button className="headerLink">Log in</button>
+            </Link>
+          </div>
+          {isOpen ? (
+            <VscChromeClose
+              className="absolute right-10 z-10 cursor-pointer text-2xl text-white/80 sm:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+          ) : (
+            <VscMenu
+              className="cursor-pointer text-2xl text-white/80 sm:hidden"
+              onClick={() => setIsOpen(true)}
+            />
+          )}
+
+          {isOpen && (
+            <div className="justify-cent absolute top-0 left-0 bottom-0 flex w-full flex-col items-start bg-black text-sm text-white/80 sm:hidden">
+              <Link href="/">
+                <p className="headermenuLink">Pricing</p>
+              </Link>
+              <Link href="/">
+                <p className="headermenuLink">Documentation</p>
+              </Link>
+              <Link href="/login">
+                <p className="headermenuLink">Log in</p>
+              </Link>
+            </div>
+          )}
         </div>
-        <div className="flex items-center text-white/80 transition duration-200 hover:scale-105 hover:text-white/100 sm:hidden">
+        {/* <div className="flex items-center text-white/80 transition duration-200 hover:scale-105 hover:text-white/100 sm:hidden">
           <AiOutlineMenu className="text-2xl" />
-        </div>
+        </div> */}
       </div>
     </header>
   );

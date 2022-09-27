@@ -14,6 +14,8 @@ module.exports = {
       author: ["Author", "sans-serif"],
       inter: ["Inter", "sans-serif;"],
       britney: ["britney", "sans-serif;"],
+      chillax: ["chillax", "sans-serif"],
+      satoshi: ["satoshi", "sans-serif"],
     },
     extend: {
       backgroundImage: {
