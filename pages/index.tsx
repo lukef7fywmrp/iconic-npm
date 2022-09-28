@@ -44,14 +44,14 @@ const Home = ({ posts }: Props) => {
             Most used libraries in today's production
           </p>
         </div>
-        <div className="scrollbar-hide  flex gap-8 overflow-scroll px-5 pt-10 pb-10 lg:px-20 xl:px-40">
+        <div className="scrollbar-hide  flex gap-5 overflow-scroll px-5 pt-10 pb-10 lg:px-20 xl:px-40">
           <LibraryTop
             librarytopLogo="/react.png"
             librarytopName="React.js"
             librarytopDescription="A JavaScript library for building user interfaces"
             librarytopImage="/jordan.png"
             librarytopAuthor="Jordan Walke"
-            librarytopLink="/Reactjs"
+            librarytopLink="/React"
           />
           <LibraryTop
             librarytopLogo="/nextjs.png"

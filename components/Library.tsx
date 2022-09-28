@@ -11,11 +11,11 @@ interface Props {
 
 function Library(props: Props) {
   return (
-    <div className="flex w-full cursor-pointer flex-col justify-center space-y-3 rounded-xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
+    <div className="flex w-full cursor-pointer flex-col justify-center space-y-3 rounded-3xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
       <div className="flex w-full flex-row items-center justify-between">
         <div className="group flex items-center space-x-2">
-          <div className="gradientBorder rounded-2xl p-[2.5px]">
-            <div className="flex h-16 w-16 items-center rounded-2xl bg-white p-2">
+          <div className="relative">
+            <div className="before:gradient flex h-16 w-16 items-center rounded-3xl bg-white p-2 before:rounded-3xl">
               <Image src={props.libraryLogo} height="100%" width="100%" />
             </div>
           </div>
@@ -26,8 +26,8 @@ function Library(props: Props) {
         </div>
         {/* Button */}
         <div className="relative">
-          <div className="before:gradient group p-[2px] text-lg">
-            <button className="group relative inline-flex items-center justify-start overflow-hidden rounded-md px-3 py-1 font-normal">
+          <div className="before:gradient group p-0.5 text-lg before:rounded-full">
+            <button className="group relative inline-flex items-center justify-start overflow-hidden rounded-full px-3 py-1 font-normal">
               <span className="from absolute left-0 top-0 h-32 w-32 translate-x-12 -translate-y-2 rotate-45 bg-gradient-to-tr from-purple-500 to-orange-500 opacity-[0%]"></span>
               <span className="absolute top-0 left-0 -mt-1 h-48 w-48 -translate-x-56 -translate-y-24 rotate-45 bg-gradient-to-tr from-purple-500 to-orange-500 opacity-100 transition-all duration-500 ease-in-out group-hover:-translate-x-8"></span>
               <span className="relative flex max-w-sm items-center text-left tracking-wide text-white transition-colors duration-200 ease-in-out group-hover:text-white">

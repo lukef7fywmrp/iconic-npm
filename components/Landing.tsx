@@ -24,15 +24,15 @@ function Landing() {
     <div>
       {/* Gradient Background */}
       <img
-        className="absolute top-0 h-[200vh] w-full lg:h-[150vh]"
-        src="/gradientbg.png"
+        className="absolute top-0 h-[160vh] w-full lg:h-[130vh]"
+        src="/gradientbg01.png"
         alt=""
       />
       <div className="relative mx-auto flex h-full w-full max-w-[2000px] flex-col items-center justify-center space-y-10 px-8 font-author tracking-wide sm:px-20 lg:flex-row-reverse lg:gap-5 xl:px-40">
         {/* Video */}
-        <div className="gradientBorder flex w-full space-x-10 overflow-auto rounded-2xl p-[2.5px]">
+        <div className="flex w-full space-x-10 overflow-auto rounded-3xl bg-white/10 p-1">
           <iframe
-            className="aspect-video flex-1 rounded-2xl"
+            className="aspect-video flex-1 rounded-[20px]"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             src="https://www.youtube.com/embed/DCTuw2P6DCU"
@@ -50,15 +50,13 @@ function Landing() {
             </h2>
           </div>
           {/* Search */}
-          <div className="relative">
-            <div className="before:gradients flex cursor-pointer rounded-xl">
-              <div className="flex items-center rounded-l-md pl-3 ">
-                <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/80 focus:text-white" />
-              </div>
+          <div className="rounded-xl border-2 border-white/10">
+            <div className="flex cursor-pointer items-center rounded-[10px] bg-white/5 pl-3">
+              <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/50 focus:text-white" />
               <input
                 type="text"
                 placeholder="Search packages"
-                className="relative flex-1 rounded-r-md bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/80 outline-none"
+                className="flex-1 bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/50 outline-none"
               />
             </div>
           </div>
