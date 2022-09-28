@@ -13,9 +13,14 @@ function Header() {
         <Link href="/">
           <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
             <div className="relative h-8 w-8">
-              <Image src="/Logo2.png" objectFit="contain" layout="fill" />
+              <Image
+                className="rounded-full"
+                src="/Logo1.png"
+                objectFit="contain"
+                layout="fill"
+              />
             </div>
-            <p className="font-author text-lg tracking-wider text-white/90">
+            <p className="to bg-gradient-to-tr bg-clip-text font-author text-lg tracking-wider text-white/80">
               Iconic
             </p>
           </div>

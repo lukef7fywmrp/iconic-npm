@@ -22,14 +22,14 @@ function React() {
           src="/gradientbg01.png"
           alt=""
         />
-        <div className="group relative flex flex-col items-center space-y-3 px-10 font-author">
-          <div className="gradientBorder rounded-3xl p-[2.5px]">
-            <div className="flex h-24 w-24 items-center rounded-3xl bg-white p-2 ">
+        <div className="group flex flex-col items-center justify-center space-y-3 py-10">
+          <div className="relative">
+            <div className="flex h-24 w-24 items-center rounded-3xl border border-white/10 bg-white/10 p-3 transition duration-500 group-hover:bg-white/20">
               <Image src="/react.png" height="100%" width="100%" />
             </div>
           </div>
           {/* Title */}
-          <h1 className="text-center text-2xl text-white/90 duration-500 group-hover:scale-105  group-hover:text-white/100">
+          <h1 className="z-10 text-center text-2xl tracking-wide text-white/90  duration-500 group-hover:scale-105 group-hover:text-white/100">
             React.js
           </h1>
         </div>

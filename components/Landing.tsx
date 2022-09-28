@@ -24,7 +24,7 @@ function Landing() {
     <div>
       {/* Gradient Background */}
       <img
-        className="absolute top-0 h-[160vh] w-full lg:h-[130vh]"
+        className="absolute top-0 h-[120vh] w-full lg:h-[100vh]"
         src="/gradientbg01.png"
         alt=""
       />
@@ -50,13 +50,13 @@ function Landing() {
             </h2>
           </div>
           {/* Search */}
-          <div className="rounded-xl border-2 border-white/10">
+          <div className="rounded-xl border border-white/10">
             <div className="flex cursor-pointer items-center rounded-[10px] bg-white/5 pl-3">
               <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/50 focus:text-white" />
               <input
                 type="text"
                 placeholder="Search packages"
-                className="flex-1 bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/50 outline-none"
+                className="relative flex-1 bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/50 outline-none"
               />
             </div>
           </div>
