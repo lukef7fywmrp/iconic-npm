@@ -51,7 +51,7 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="A JavaScript library for building user interfaces"
             librarytopImage="/jordan.png"
             librarytopAuthor="Jordan Walke"
-            librarytopLink="/React"
+            librarytopLink="/react"
           />
           <LibraryTop
             librarytopLogo="/nextjs.png"
@@ -59,7 +59,7 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="The React Framework for Production"
             librarytopImage="/guillermo.png"
             librarytopAuthor="Guillermo Rauch"
-            librarytopLink=""
+            librarytopLink="/nextjs"
           />
           <LibraryTop
             librarytopLogo="/tailwind.png"
@@ -67,7 +67,7 @@ const Home = ({ posts }: Props) => {
             librarytopDescription="Rapidly build modern websites without ever leaving your HTML."
             librarytopImage="/adamwathan.jpeg"
             librarytopAuthor="Adam Wathan"
-            librarytopLink=""
+            librarytopLink="/tailwind"
           />
         </div>
       </section>

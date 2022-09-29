@@ -2,17 +2,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { VscMenu, VscChromeClose } from "react-icons/vsc";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
+import { useRouter } from "next/router";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [user] = useAuthState(auth);
+  const router = useRouter();
+  const [show, setShow] = useState(true);
+
+  const logout = async () => {
+    await signOut(auth);
+
+    setIsOpen(false);
+
+    router.push("/login");
+  };
+
+  useEffect(() => {
+    // Set show to false after 3 seconds
+    setTimeout(() => setShow(false), 3000);
+  }, []);
+
   return (
     <header className="flex">
       <div className="z-10 flex h-full w-full justify-between px-10 py-3">
         {/* Logo */}
         <Link href="/">
           <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
-            <div className="relative h-8 w-8">
+            <div
+              className={`relative h-8 w-8 ${
+                show && "rotate-180 animate-spin"
+              }`}
+            >
               <Image
                 className="rounded-full"
                 src="/logo5.png"
@@ -34,9 +59,15 @@ function Header() {
             <Link href="/">
               <p className="headerLink">Documentation</p>
             </Link>
-            <Link href="/login">
-              <button className="headerLink">Log in</button>
-            </Link>
+            {user ? (
+              <Link href="/profile">
+                <p className="headerLink">Profile</p>
+              </Link>
+            ) : (
+              <Link href="/login">
+                <button className="headerLink">Log in</button>
+              </Link>
+            )}
           </div>
           {isOpen ? (
             <VscChromeClose
@@ -58,9 +89,20 @@ function Header() {
               <Link href="/">
                 <p className="headermenuLink">Documentation</p>
               </Link>
-              <Link href="/login">
-                <p className="headermenuLink">Log in</p>
-              </Link>
+              {user ? (
+                <>
+                  <Link href="/profile">
+                    <p className="headermenuLink">Profile</p>
+                  </Link>
+                  <p className="headermenuLink" onClick={logout}>
+                    Logout
+                  </p>
+                </>
+              ) : (
+                <Link href="/login">
+                  <p className="headermenuLink">Log in</p>
+                </Link>
+              )}
             </div>
           )}
         </div>
