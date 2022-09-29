@@ -4,7 +4,16 @@ import { sanityClient } from "../../sanity";
 
 const query = groq`*[_type == "library" && title == "React.js" || title == "Next.js" || title == "Tailwind CSS"] {
 _id,
- ...
+slug,
+title,
+description,
+logo,
+creator -> {
+    name,
+    slug,
+    image
+},
+documentation
 } `;
 
 type Data = {

@@ -7,7 +7,7 @@ interface Props {
 }
 
 function LibraryTop({
-  library: { title, description, creatorName, creatorImage, logo, slug },
+  library: { title, description, logo, slug, creator },
 }: Props) {
   return (
     <Link href={slug.current}>
@@ -32,13 +32,13 @@ function LibraryTop({
           <div className="relative h-7 w-7">
             <Image
               className="rounded-full"
-              src={urlFor(creatorImage).url()!}
+              src={urlFor(creator.image).url()!}
               objectFit="contain"
               layout="fill"
             />
           </div>
           <button className="text-white/60 duration-500 group-hover:text-white/90">
-            {creatorName}
+            {creator.name}
           </button>
         </div>
         {/* Button */}

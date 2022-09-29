@@ -9,6 +9,12 @@ export default {
       type: "string",
     },
     {
+      name: "creator",
+      title: "Creator",
+      type: "reference",
+      to: [{ type: "creator" }],
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -21,19 +27,6 @@ export default {
       name: "description",
       title: "Description",
       type: "text",
-    },
-    {
-      name: "creatorName",
-      title: "Creator Name",
-      type: "string",
-    },
-    {
-      name: "creatorImage",
-      title: "Creator Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
     },
     {
       name: "logo",

@@ -1,3 +1,15 @@
+interface Creator {
+  name: string;
+  slug: {
+    current: string;
+  };
+  image: {
+    asset: {
+      url: string;
+    };
+  };
+}
+
 interface Library {
   _id: string;
   _rev: string;
@@ -5,16 +17,11 @@ interface Library {
   _updatedAt: string;
   title: string;
   description: string;
+  creator: Creator;
   slug: {
     current: string;
   };
   logo: {
-    asset: {
-      url: string;
-    };
-  };
-  creatorName: string;
-  creatorImage: {
     asset: {
       url: string;
     };
