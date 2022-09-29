@@ -18,9 +18,6 @@
   .headermenuLink {
     @apply w-full max-w-xs cursor-pointer rounded-md px-5 py-3 tracking-wide transition duration-500 ease-in-out hover:bg-white/5 hover:text-white/100;
   }
-  .gradientBorder {
-    @apply rounded-md bg-gradient-to-tr from-purple-500 to-orange-500;
-  }
   .gradient {
     content: "";
     position: absolute;

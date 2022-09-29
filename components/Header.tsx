@@ -15,12 +15,12 @@ function Header() {
             <div className="relative h-8 w-8">
               <Image
                 className="rounded-full"
-                src="/Logo1.png"
+                src="/logo5.png"
                 objectFit="contain"
                 layout="fill"
               />
             </div>
-            <p className="to bg-gradient-to-tr bg-clip-text font-author text-lg tracking-wider text-white/80">
+            <p className="to bg-gradient-to-tr bg-clip-text font-teko text-2xl font-light  text-white/80">
               Iconic
             </p>
           </div>
