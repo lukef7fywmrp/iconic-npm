@@ -82,7 +82,7 @@ function Header() {
           )}
 
           {isOpen && (
-            <div className="justify-cent absolute top-0 left-0 bottom-0 flex w-full flex-col items-start bg-black text-sm text-white/80 sm:hidden">
+            <div className="absolute top-0 left-0 bottom-0 flex w-full flex-col items-start bg-black text-sm text-white/80 sm:hidden">
               <Link href="/">
                 <p className="headermenuLink">Pricing</p>
               </Link>

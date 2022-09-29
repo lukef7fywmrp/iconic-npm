@@ -1,47 +1,44 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { urlFor } from "../sanity";
 
 interface Props {
-  librarytopLogo: string;
-  librarytopName: string;
-  librarytopDescription: string;
-  librarytopImage: string;
-  librarytopAuthor: string;
-  librarytopLink: string;
+  library: Library;
 }
 
-function LibraryTop(props: Props) {
+function LibraryTop({
+  library: { title, description, creatorName, creatorImage, logo, slug },
+}: Props) {
   return (
-    <Link href={props.librarytopLink}>
+    <Link href={slug.current}>
       <div className="flex w-full flex-col items-center justify-center space-y-3 rounded-2xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
         <div className="group flex flex-col items-center space-y-3 px-10 font-author">
           <div className="relative ">
             <div className="before:gradient flex h-24 w-24 items-center rounded-full bg-white p-3  before:rounded-full before:border-[2.5px]">
-              <Image src={props.librarytopLogo} height="100%" width="100%" />
+              <Image src={urlFor(logo).url()!} height="100%" width="100%" />
             </div>
           </div>
           {/* Title */}
           <h1 className="text-center text-2xl text-white/90 duration-500 group-hover:scale-105  group-hover:text-white/100">
-            {props.librarytopName}
+            {title}
           </h1>
         </div>
         {/* Description */}
         <p className="h-16 w-56 text-center font-inter text-sm text-white/40">
-          {props.librarytopDescription}
+          {description}
         </p>
         {/* Author */}
         <div className="group flex space-x-2 py-2 pb-5 font-inter text-xs">
           <div className="relative h-7 w-7">
             <Image
               className="rounded-full"
-              src={props.librarytopImage}
+              src={urlFor(creatorImage).url()!}
               objectFit="contain"
               layout="fill"
             />
           </div>
           <button className="text-white/60 duration-500 group-hover:text-white/90">
-            {props.librarytopAuthor}
+            {creatorName}
           </button>
         </div>
         {/* Button */}

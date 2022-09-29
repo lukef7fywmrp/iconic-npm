@@ -1,30 +1,18 @@
-import type { GetServerSideProps } from "next";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Library from "../components/Library";
 import LibraryTop from "../components/LibraryTop";
-import Footer from "../components/Footer";
-import Link from "next/link";
+import { fetchLibrariesTop } from "../utils/fetchLibrariesTop";
 
 interface Props {
-  posts: Post[];
+  librariesTop: Library[];
 }
 
-// const Login = async() => {
-//   if (!user) return
-
-//    await signInWithGoogle().then(() => {
-//     console.log("signed in");
-
-//     // Redirect to the home page
-//     Router.push("/");
-//   }).catch((error) => {
-//     console.log(error);
-//   });
-// }
-
-const Home = ({ posts }: Props) => {
+const Home = ({ librariesTop }: Props) => {
+  console.log(librariesTop);
   return (
     <div className="relative min-h-screen w-full overflow-y-hidden">
       <Head>
@@ -45,30 +33,9 @@ const Home = ({ posts }: Props) => {
           </p>
         </div>
         <div className="scrollbar-hide  flex gap-5 overflow-scroll px-5 pt-10 pb-10 lg:px-20 xl:px-40">
-          <LibraryTop
-            librarytopLogo="/react.png"
-            librarytopName="React.js"
-            librarytopDescription="A JavaScript library for building user interfaces"
-            librarytopImage="/jordan.png"
-            librarytopAuthor="Jordan Walke"
-            librarytopLink="/react"
-          />
-          <LibraryTop
-            librarytopLogo="/nextjs.png"
-            librarytopName="Next.js"
-            librarytopDescription="The React Framework for Production"
-            librarytopImage="/guillermo.png"
-            librarytopAuthor="Guillermo Rauch"
-            librarytopLink="/nextjs"
-          />
-          <LibraryTop
-            librarytopLogo="/tailwind.png"
-            librarytopName="Tailwind.css"
-            librarytopDescription="Rapidly build modern websites without ever leaving your HTML."
-            librarytopImage="/adamwathan.jpeg"
-            librarytopAuthor="Adam Wathan"
-            librarytopLink="/tailwind"
-          />
+          {librariesTop.map((library) => (
+            <LibraryTop key={library._id} library={library} />
+          ))}
         </div>
       </section>
       {/* Library */}
@@ -160,17 +127,12 @@ const Home = ({ posts }: Props) => {
 
 export default Home;
 
-// Server Side Rendering (SSR) - fetch data from the server - optimizes the page load time and removes loading
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
-) => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-
-  const data: Post[] = await res.json();
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const librariesTop = await fetchLibrariesTop();
 
   return {
     props: {
-      posts: data,
+      librariesTop,
     },
   };
 };
