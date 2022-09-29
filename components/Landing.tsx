@@ -1,25 +1,6 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-
-// interface Props {
-//   posts: Post[];]
 
 function Landing() {
-  // const [posts, setPosts] = useState<Post[]>([]);
-
-  // Typical react way to fetch data
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  //     const data = await res.json();
-  //     setPosts(data);
-  //   };
-
-  //   fetchPosts();
-  // }, []);
-
-  // console.log(posts);
-
   return (
     <div>
       {/* Gradient Background */}
