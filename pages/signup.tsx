@@ -114,12 +114,12 @@ function Signup() {
             />
             {passwordType === "password" ? (
               <AiFillEye
-                className="absolute right-4 cursor-pointer text-2xl text-white"
+                className="absolute right-4 cursor-pointer text-lg text-white/20"
                 onClick={togglePassword}
               />
             ) : (
               <AiFillEyeInvisible
-                className="absolute right-4 cursor-pointer text-2xl text-white"
+                className="absolute right-4 cursor-pointer text-lg text-white/20"
                 onClick={togglePassword}
               />
             )}
@@ -135,12 +135,12 @@ function Signup() {
             />
             {passwordType === "password" ? (
               <AiFillEye
-                className="absolute right-4 cursor-pointer text-2xl text-white"
+                className="absolute right-4 cursor-pointer text-lg text-white/20"
                 onClick={togglePassword}
               />
             ) : (
               <AiFillEyeInvisible
-                className="absolute right-4 cursor-pointer text-2xl text-white"
+                className="absolute right-4 cursor-pointer text-lg text-white/20"
                 onClick={togglePassword}
               />
             )}

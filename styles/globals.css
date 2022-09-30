@@ -19,7 +19,7 @@
     @apply w-full max-w-xs cursor-pointer rounded-md px-5 py-3 tracking-wide transition duration-500 ease-in-out hover:bg-white/5 hover:text-white/100;
   }
   .gradientBorder {
-    @apply rounded-full bg-gradient-to-r from-fuchsia-800 to-amber-600;
+    background: linear-gradient(45deg, purple, orange);
   }
   .gradient {
     content: "";
