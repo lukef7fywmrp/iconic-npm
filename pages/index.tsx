@@ -53,14 +53,7 @@ const Home = ({ librariesTop }: Props) => {
             libraryName="Firebase"
             libraryDescription="Firebase is an app development platform that helps you build and grow apps and games users love. "
             libraryImage="/jamestamplin.jpeg"
-            libraryAuthor="James Tamplin"
-          />
-          <Library
-            libraryLogo="/redux.png"
-            libraryName="Redux"
-            libraryDescription="Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test."
-            libraryImage="/danabramov.jpeg"
-            libraryAuthor="Dan Abramov"
+            libraryAuthor="James Tamplin & Andrew Clark"
           />
           <Library
             libraryLogo="/Nextauth.png"
@@ -70,11 +63,18 @@ const Home = ({ librariesTop }: Props) => {
             libraryAuthor="Iain Collins"
           />
           <Library
-            libraryLogo="/tailwind.png"
-            libraryName="Tailwind.css"
-            libraryDescription="Rapidly build modern websites without ever leaving your HTML."
-            libraryImage="/adamwathan.jpeg"
-            libraryAuthor="Adam Wathan"
+            libraryLogo="/recoiljs.png"
+            libraryName="Recoil.js"
+            libraryDescription="A state management library for React"
+            libraryImage="/davidmccabe.png"
+            libraryAuthor="David McCabe"
+          />
+          <Library
+            libraryLogo="/redux.png"
+            libraryName="Redux"
+            libraryDescription="Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test."
+            libraryImage="/danabramov.jpeg"
+            libraryAuthor="Dan Abramov"
           />
           <Library
             libraryLogo="/firebase.png"

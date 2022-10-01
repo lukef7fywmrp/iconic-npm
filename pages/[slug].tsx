@@ -41,6 +41,7 @@ function LibraryPage({ library }: Props) {
           <h1 className="z-10 text-center text-2xl tracking-wide text-white/80 duration-500 group-hover:scale-105 group-hover:text-white/100">
             {library.title}
           </h1>
+          <p>{library.description}</p>
         </div>
       </main>
     </div>

@@ -39,7 +39,7 @@ function Library(props: Props) {
         </div>
       </div>
       {/* Description */}
-      <p className="font-inter text-sm text-white/40">
+      <p className="h-full max-h-20 font-inter text-sm text-white/40">
         {props.libraryDescription}
       </p>
       {/* Author */}
