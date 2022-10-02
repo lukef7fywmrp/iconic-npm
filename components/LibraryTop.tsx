@@ -11,11 +11,16 @@ function LibraryTop({
 }: Props) {
   return (
     <Link href={slug.current}>
-      <div className="flex w-full flex-col items-center justify-center space-y-3 rounded-2xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
+      <div className="flex w-full cursor-pointer flex-col items-center justify-center space-y-3 rounded-2xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
         <div className="group flex flex-col items-center space-y-3 px-10 font-author">
           <div className="gradientBorder rounded-full p-[2.5px]">
             <div className="flex h-24 w-24 items-center rounded-full bg-white p-3">
-              <Image src={urlFor(logo).url()!} height="100%" width="100%" />
+              <Image
+                src={urlFor(logo).url()!}
+                height="100%"
+                width="100%"
+                objectFit="contain"
+              />
             </div>
           </div>
           {/* Title */}
