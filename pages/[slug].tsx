@@ -26,22 +26,32 @@ function LibraryPage({ library }: Props) {
           src="/gradientbg01.png"
           alt=""
         />
-        <div className="group flex flex-col items-center justify-center space-y-3 py-10">
-          <div className="relative">
-            <div className="flex h-24 w-24 items-center rounded-3xl border border-white/10 bg-white/10 p-3 transition duration-500 group-hover:bg-white/20">
-              <Image
-                src={urlFor(library.logo).url()!}
-                height="100%"
-                width="100%"
-                objectFit="contain"
-              />
+        <div className="py-10">
+          <div className="group flex flex-col items-center justify-center space-y-3 ">
+            <div className="relative">
+              <div className="flex h-24 w-24 items-center rounded-3xl border border-white/10 bg-white/10 p-3 transition duration-500 group-hover:bg-white/20">
+                <Image
+                  src={urlFor(library.logo).url()!}
+                  height="100%"
+                  width="100%"
+                  objectFit="contain"
+                />
+              </div>
             </div>
+            {/* Title */}
+            <h1 className="z-10 text-center text-2xl tracking-wide text-white/90 duration-500 group-hover:scale-105 group-hover:text-white/100">
+              {library.title}
+            </h1>
           </div>
-          {/* Title */}
-          <h1 className="z-10 text-center text-2xl tracking-wide text-white/80 duration-500 group-hover:scale-105 group-hover:text-white/100">
-            {library.title}
-          </h1>
-          <p>{library.description}</p>
+          <div className="relative flex items-center justify-center">
+            <p className="z-10 text-white/50">{library.description}</p>
+            {/* <Image
+              src={urlFor(library.creator.name).url()!}
+              height="100%"
+              width="100%"
+              objectFit="contain"
+            /> */}
+          </div>
         </div>
       </main>
     </div>

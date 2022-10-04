@@ -13,13 +13,13 @@
 }
 @layer components {
   .headerLink {
-    @apply cursor-pointer rounded-md px-4 py-1 tracking-wide transition duration-500 ease-in-out hover:bg-white/5 hover:text-white/100;
+    @apply cursor-pointer space-x-6 rounded-md px-4 py-1 text-sm tracking-wide text-white/80 transition duration-500 ease-in-out hover:bg-white/5 hover:text-white/100;
   }
   .headermenuLink {
     @apply w-full max-w-xs cursor-pointer rounded-md px-5 py-3 tracking-wide transition duration-500 ease-in-out hover:bg-white/5 hover:text-white/100;
   }
   .gradientBorder {
-    background: linear-gradient(45deg, purple, orange);
+    background: linear-gradient(45deg, purple, orange) border-box;
   }
   .gradient {
     content: "";

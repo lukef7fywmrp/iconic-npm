@@ -22,10 +22,10 @@ function Header() {
     router.push("/login");
   };
 
-  useEffect(() => {
-    // Set show to false after 3 seconds
-    setTimeout(() => setShow(false), 3000);
-  }, []);
+  // useEffect(() => {
+  //   // Set show to false after 3 seconds
+  //   setTimeout(() => setShow(false), 3000);
+  // }, []);
 
   return (
     <header className="flex">
@@ -45,14 +45,14 @@ function Header() {
                 layout="fill"
               />
             </div>
-            <p className="to bg-gradient-to-tr bg-clip-text font-teko text-2xl font-light  text-white/80">
+            <p className="bg-gradient-to-tr bg-clip-text font-teko text-2xl font-light text-white/80">
               Iconic
             </p>
           </div>
         </Link>
         {/* Header links and menu */}
         <div className="flex items-center">
-          <div className="hidden space-x-6 text-sm text-white/80 sm:flex">
+          <div className="hidden sm:flex">
             <Link href="/">
               <p className="headerLink">Pricing</p>
             </Link>
