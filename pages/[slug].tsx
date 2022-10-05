@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 import { sanityClient, urlFor } from "../sanity";
+import { RiArrowUpSFill } from "react-icons/ri";
 
 interface Props {
   library: Library;
@@ -26,31 +27,50 @@ function LibraryPage({ library }: Props) {
           src="/gradientbg01.png"
           alt=""
         />
-        <div className="py-10">
-          <div className="group flex flex-col items-center justify-center space-y-3 ">
-            <div className="relative">
-              <div className="flex h-24 w-24 items-center rounded-3xl border border-white/10 bg-white/10 p-3 transition duration-500 group-hover:bg-white/20">
-                <Image
-                  src={urlFor(library.logo).url()!}
-                  height="100%"
-                  width="100%"
-                  objectFit="contain"
-                />
+        <div className="relative py-10">
+          <div className="flex flex-col items-center justify-center space-y-3 ">
+            <div className="group space-y-2">
+              <div className="gradientBorder relative rounded-3xl p-0.5">
+                <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-white p-2">
+                  <Image
+                    src={urlFor(library.logo).url()!}
+                    height="100%"
+                    width="100%"
+                    objectFit="contain"
+                  />
+                </div>
               </div>
+              {/* Title */}
+              <h1 className="z-10 text-center text-2xl tracking-wide text-white/90 duration-500 group-hover:scale-105 group-hover:text-white/100">
+                {library.title}
+              </h1>
+              {/* Description */}
+              <p></p>
             </div>
-            {/* Title */}
-            <h1 className="z-10 text-center text-2xl tracking-wide text-white/90 duration-500 group-hover:scale-105 group-hover:text-white/100">
-              {library.title}
-            </h1>
-          </div>
-          <div className="relative flex items-center justify-center">
-            <p className="z-10 text-white/50">{library.description}</p>
-            {/* <Image
-              src={urlFor(library.creator.name).url()!}
-              height="100%"
-              width="100%"
-              objectFit="contain"
-            /> */}
+            {/* Author */}
+            <div className="relative flex items-center justify-center space-x-5 pb-5 font-inter text-xs">
+              <div className="group flex items-center space-x-2">
+                <div className="relative h-7 w-7">
+                  <Image
+                    className="rounded-full"
+                    src="/guillermo.png"
+                    height={100}
+                    width={100}
+                  />
+                </div>
+                <button className="text-white/60 duration-500 group-hover:text-white/90">
+                  Guillermo Rauch
+                </button>
+              </div>
+              <div className="h-6 border-[0.5px] border-white/20"></div>
+              {/* Upvotes */}
+              <button className="flex items-center rounded-lg border border-white/20">
+                <RiArrowUpSFill className="mx-1 text-2xl text-white/50 transition duration-300 hover:text-white/90" />
+                <p className="border-l border-white/20 py-1 px-2 text-white/90">
+                  150
+                </p>
+              </button>
+            </div>
           </div>
         </div>
       </main>

@@ -34,18 +34,18 @@ function Header() {
         <Link href="/">
           <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
             <div
-              className={`relative h-8 w-8 ${
-                show && "rotate-180 animate-spin"
+              className={`relative h-10 w-10 ${
+                show && "animate-spin hue-rotate-90"
               }`}
             >
               <Image
                 className="rounded-full"
-                src="/logo5.png"
+                src="/logo2.png"
                 objectFit="contain"
                 layout="fill"
               />
             </div>
-            <p className="bg-gradient-to-tr bg-clip-text font-teko text-2xl font-light text-white/80">
+            <p className="bg-gradient-to-tr bg-clip-text font-teko text-xl font-light text-white/80">
               Iconic
             </p>
           </div>

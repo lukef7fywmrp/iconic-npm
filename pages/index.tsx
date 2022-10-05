@@ -40,7 +40,7 @@ const Home = ({ librariesTop, libraries }: Props) => {
             Browse the library you need and get started
           </p>
         </div>
-        <div className="scrollbar-hide  flex gap-5 overflow-scroll px-5 pt-5 pb-10 lg:px-20 xl:px-40">
+        <div className="scrollbar-hide  mx-5 flex  gap-5 overflow-scroll pt-5 pb-10 lg:mx-0 lg:px-20 xl:px-40">
           {librariesTop.map((library) => (
             <LibraryTop key={library._id} library={library} />
           ))}
@@ -48,6 +48,18 @@ const Home = ({ librariesTop, libraries }: Props) => {
       </section>
       {/* Library */}
       <section className="relative px-5 font-author lg:px-20 xl:px-40">
+        <div className="mb-8 hidden justify-end md:flex">
+          <div className="w-full max-w-xs rounded-md border border-white/10">
+            <div className="flex w-full cursor-pointer items-center rounded-[5px] bg-white/5 pl-3">
+              <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/50" />
+              <input
+                type="text"
+                placeholder="Search packages"
+                className="flex-1 bg-transparent py-3 px-4 tracking-wide text-white/80 placeholder-white/50 outline-none"
+              />
+            </div>
+          </div>
+        </div>
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <h1 className="text-4xl text-white">Libraries</h1>
@@ -56,18 +68,7 @@ const Home = ({ librariesTop, libraries }: Props) => {
               community
             </p>
           </div>
-          <div className="hidden rounded-md border border-white/10 lg:flex">
-            <div className="flex cursor-pointer items-center rounded-[5px] bg-white/5 pl-3">
-              <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/50 focus:text-white" />
-              <input
-                type="text"
-                placeholder="Search packages"
-                className="relative flex-1 bg-transparent py-2 px-4 tracking-wide text-white/80 placeholder-white/50 outline-none"
-              />
-            </div>
-          </div>
         </div>
-
         <div className="grid gap-3 pb-10 pt-5 md:grid-cols-2">
           {libraries.map((library) => (
             <Library key={library._id} library={library} />
