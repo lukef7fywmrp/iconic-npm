@@ -40,7 +40,7 @@ const Home = ({ librariesTop, libraries }: Props) => {
             Browse the library you need and get started
           </p>
         </div>
-        <div className="scrollbar-hide  mx-5 flex  gap-5 overflow-scroll pt-5 pb-10 lg:mx-0 lg:px-20 xl:px-40">
+        <div className="flex gap-5 overflow-scroll px-5 pt-5 pb-10 lg:mx-0 lg:px-20 xl:px-40">
           {librariesTop.map((library) => (
             <LibraryTop key={library._id} library={library} />
           ))}

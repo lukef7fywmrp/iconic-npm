@@ -15,7 +15,7 @@ function Library({
 }: Props) {
   return (
     <Link href={slug.current}>
-      <div className="w-full cursor-pointer rounded-2xl bg-white/5 px-10 py-5 transition duration-500 hover:bg-white/10">
+      <div className="w-full cursor-pointer rounded-2xl border border-white/5 bg-white/5 px-10 py-5 transition duration-500 hover:bg-white/10">
         <div className="flex flex-col justify-center space-y-3">
           <div className="flex w-full flex-row items-center justify-between">
             <div className="group flex items-center space-x-2">
@@ -57,8 +57,8 @@ function Library({
             {description}
           </p>
           {/* Author */}
-          <div className="group flex items-center justify-between py-2 font-inter text-xs">
-            <div className="flex items-center space-x-2 ">
+          <div className="flex items-center justify-between py-2 font-inter text-xs">
+            <div className="group flex items-center space-x-2">
               {creator.image && (
                 <div className="relative h-7 w-7">
                   <Image
@@ -75,8 +75,10 @@ function Library({
                 {creator.name}
               </button>
             </div>
-            <button className="flex items-center rounded-lg border border-white/20 ">
-              <RiArrowUpSFill className="mx-1 text-2xl text-white/50 transition duration-300 hover:text-white/90" />
+            <button className="flex items-center rounded-md border border-white/20 ">
+              <div className="rounded-l-[7px] px-1 text-2xl text-white/50 transition duration-300 hover:bg-white/10 hover:text-white/90">
+                <RiArrowUpSFill />
+              </div>
               <p className="border-l border-white/20 py-1 px-2 text-white/90">
                 150
               </p>

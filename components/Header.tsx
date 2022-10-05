@@ -33,11 +33,7 @@ function Header() {
         {/* Logo */}
         <Link href="/">
           <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
-            <div
-              className={`relative h-10 w-10 ${
-                show && "animate-spin hue-rotate-90"
-              }`}
-            >
+            <div className={`relative h-10 w-10 ${show && "animate-spin"}`}>
               <Image
                 className="rounded-full"
                 src="/logo2.png"

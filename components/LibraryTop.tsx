@@ -14,7 +14,7 @@ function LibraryTop({
 }: Props) {
   return (
     <Link href={slug.current}>
-      <div className="w-full cursor-pointer rounded-2xl bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
+      <div className="w-full cursor-pointer rounded-2xl border border-white/5 bg-white/5 py-5 px-10 transition duration-500 hover:bg-white/10">
         <div className="flex flex-col items-center justify-center space-y-3 ">
           <div className="group flex flex-col items-center space-y-3 px-10 font-author">
             <div className="gradientBorder rounded-3xl p-[2.5px]">
@@ -51,8 +51,10 @@ function LibraryTop({
                 {creator.name}
               </button>
             </div>
-            <button className="flex items-center rounded-lg border border-white/20">
-              <RiArrowUpSFill className="mx-1 text-2xl text-white/50 transition duration-300 hover:text-white/90" />
+            <button className="flex items-center rounded-md border border-white/20">
+              <div className="rounded-l-[7px] px-1 text-2xl text-white/50 transition duration-300 hover:bg-white/10 hover:text-white/90">
+                <RiArrowUpSFill />
+              </div>
               <p className="border-l border-white/20 py-1 px-2 text-white/90">
                 150
               </p>
