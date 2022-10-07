@@ -13,6 +13,7 @@ function Profile() {
       <main>
         <div>
           <Image src="" width="100%" height="100%" objectFit="contain" />
+          
         </div>
       </main>
     </div>

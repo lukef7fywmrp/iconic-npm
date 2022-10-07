@@ -28,49 +28,55 @@ function LibraryPage({ library }: Props) {
           alt=""
         />
         <div className="relative py-10">
-          <div className="flex flex-col items-center space-y-4">
-            <div className="gradientBorder rounded-3xl p-0.5">
-              <div className="h-24 w-24 rounded-3xl bg-white p-2">
-                <Image
-                  src={urlFor(library.logo).url()!}
-                  height="100%"
-                  width="100%"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-            {/* Title */}
-            <h1 className="text-2xl tracking-wide text-white/90 ">
-              {library.title}
-            </h1>
-            <p className="flex w-full items-center justify-center font-inter text-sm text-white/40">
-              The React Framework for Production
-            </p>
-            {/* Author */}
-            <div className="relative flex items-center justify-center space-x-5 font-inter text-xs">
-              <div className="group flex items-center space-x-2">
-                <div className="relative h-7 w-7">
+          <div className="flex flex-col items-center space-y-4 lg:flex-row lg:justify-between lg:px-36">
+            <div className="flex flex-col items-center justify-center lg:flex-row  lg:gap-4">
+              <div className="gradientBorder my-2 rounded-3xl p-0.5">
+                <div className="h-24 w-24 rounded-3xl bg-white p-2">
                   <Image
-                    className="rounded-full"
-                    src="/guillermo.png"
-                    height={100}
-                    width={100}
+                    src={urlFor(library.logo).url()!}
+                    height="100%"
+                    width="100%"
+                    objectFit="contain"
                   />
                 </div>
-                <button className="text-white/60 duration-500 group-hover:text-white/90">
-                  Guillermo Rauch
-                </button>
               </div>
-              <div className="h-6 border-[0.5px] border-white/20"></div>
-              {/* Upvotes */}
-              <button className="flex items-center rounded-md border border-white/20">
-                <div className="rounded-l-[7px] px-2 text-2xl text-white/50 transition duration-300 hover:bg-white/10 hover:text-white/90">
-                  <RiArrowUpSFill />
-                </div>
-                <p className="border-l border-white/20 py-1 px-3 text-white/90">
-                  150
+              {/* Title */}
+              <div className="flex flex-col items-center space-y-2 lg:items-baseline">
+                <h1 className="text-2xl tracking-wide text-white/90 ">
+                  {library.title}
+                </h1>
+                <p className="flex w-full items-center justify-center font-inter text-sm text-white/40">
+                  The React Framework for Production
                 </p>
-              </button>
+                {/* Author */}
+                <div className="flex flex-row items-center space-x-4">
+                  <div className="relative flex items-center justify-center space-x-5 font-inter text-xs ">
+                    <div className="group flex items-center space-x-2">
+                      <div className="relative h-7 w-7">
+                        <Image
+                          className="rounded-full"
+                          src="/guillermo.png"
+                          height={100}
+                          width={100}
+                        />
+                      </div>
+                      <button className="text-white/60 duration-500 group-hover:text-white/90">
+                        Guillermo Rauch
+                      </button>
+                    </div>
+                  </div>
+                  <div className="h-6 border-[0.5px] border-white/20"></div>
+                  {/* Upvotes */}
+                  <button className="flex items-center rounded-md border border-white/20">
+                    <div className="rounded-l-[7px] px-2 text-2xl text-white/50 transition duration-300 hover:bg-white/10 hover:text-white/90">
+                      <RiArrowUpSFill />
+                    </div>
+                    <p className="border-l border-white/20 py-1 px-3 text-white/90">
+                      150
+                    </p>
+                  </button>
+                </div>
+              </div>
             </div>
             {/* Button */}
             <div className="group flex justify-center rounded-lg border border-white/10 text-lg">

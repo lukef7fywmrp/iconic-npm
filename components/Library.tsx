@@ -15,7 +15,7 @@ function Library({
 }: Props) {
   return (
     <Link href={slug.current}>
-      <div className="w-full cursor-pointer rounded-2xl border border-white/5 bg-white/5 px-10 py-5 transition duration-500 hover:bg-white/10">
+      <div className=" w-full cursor-pointer rounded-2xl border border-white/5 bg-white/5 px-10 py-5 transition duration-500 hover:bg-white/10">
         <div className="flex flex-col justify-center space-y-3">
           <div className="flex w-full flex-row items-center justify-between">
             <div className="group flex items-center space-x-2">

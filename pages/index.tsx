@@ -49,13 +49,13 @@ const Home = ({ librariesTop, libraries }: Props) => {
       {/* Library */}
       <section className="relative px-5 font-author lg:px-20 xl:px-40">
         <div className="mb-8 hidden justify-end md:flex">
-          <div className="w-full max-w-xs rounded-md border border-white/10">
-            <div className="flex w-full cursor-pointer items-center rounded-[5px] bg-white/5 pl-3">
-              <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/50" />
+          <div className="w-full max-w-xs rounded-xl border border-white/10">
+            <div className="flex cursor-pointer items-center rounded-[10px] bg-white/5 pl-3">
+              <MagnifyingGlassIcon className="h-6 w-6 flex-shrink-0 text-white/50 focus:text-white" />
               <input
                 type="text"
                 placeholder="Search packages"
-                className="flex-1 bg-transparent py-3 px-4 tracking-wide text-white/80 placeholder-white/50 outline-none"
+                className="relative flex-1 bg-transparent p-3.5 tracking-wide text-white/80 placeholder-white/50 outline-none"
               />
             </div>
           </div>

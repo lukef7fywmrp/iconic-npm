@@ -33,7 +33,11 @@ function Header() {
         {/* Logo */}
         <Link href="/">
           <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
-            <div className={`relative h-10 w-10 ${show && "animate-spin"}`}>
+            <div
+              className={`relative h-12 w-12 ${
+                show && "animate-spin hue-rotate-90"
+              }`}
+            >
               <Image
                 className="rounded-full"
                 src="/logo2.png"
@@ -41,8 +45,8 @@ function Header() {
                 layout="fill"
               />
             </div>
-            <p className="bg-gradient-to-tr bg-clip-text font-teko text-xl font-light text-white/80">
-              Iconic
+            <p className="bg-gradient-to-tr bg-clip-text font-britney text-xl tracking-wide text-white/80">
+              Stardust
             </p>
           </div>
         </Link>
