@@ -1,31 +1,37 @@
 import Head from "next/head";
-import Image from "next/image";
-import Header from "../components/Header";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FiChevronRight } from "react-icons/fi";
+import Header from "../components/Header";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { auth } from "../firebase";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FIREBASE_ERRORS } from "../constants";
-import { useRouter } from "next/router";
+import { auth } from "../firebase";
+
+type Inputs = {
+  email: string;
+  password: string;
+  confirmPassword: string;
+};
 
 function Signup() {
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
   const [user] = useAuthState(auth);
   const router = useRouter();
   const [passwordType, setPasswordType] = useState("password");
-  const [formError, setFormError] = useState("");
   const [createUserWithEmailAndPassword, _, loading, authError] =
     useCreateUserWithEmailAndPassword(auth);
 
@@ -37,28 +43,9 @@ function Signup() {
     setPasswordType("password");
   };
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (formError) setFormError("");
-    if (!form.email.includes("@")) {
-      return setFormError("Please enter a valid email");
-    }
-
-    if (form.password !== form.confirmPassword) {
-      return setFormError("Passwords do not match");
-    }
-
+  const onSubmit: SubmitHandler<Inputs> = ({ email, password }) => {
     // Valid form inputs
-    createUserWithEmailAndPassword(form.email, form.password);
-  };
-
-  const onChange = ({
-    target: { name, value },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    createUserWithEmailAndPassword(email, password);
   };
 
   useEffect(() => {
@@ -92,25 +79,25 @@ function Signup() {
         {/* Email */}
         <form
           className="max-w w-full max-w-md space-y-5 px-5 sm:px-0"
-          onSubmit={onSubmit}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <div className="">
             <input
-              name="email"
               type="email"
               placeholder="Email address"
               className="gradient-input relative w-full rounded-lg border-transparent bg-white/5 py-3 px-5 text-white/80 placeholder-white/40 outline-none"
-              onChange={onChange}
+              {...register("email", { required: true })}
             />
           </div>
           <div className="relative flex items-center justify-center">
             <input
-              name="password"
               type={passwordType}
               placeholder="Password"
               autoComplete="current-password"
               className="w-full rounded-md bg-white/5 py-3 px-5 text-white/80 placeholder-white/40 outline-none "
-              onChange={onChange}
+              {...register("password", {
+                required: true,
+              })}
             />
             {passwordType === "password" ? (
               <AiFillEye
@@ -126,12 +113,18 @@ function Signup() {
           </div>
           <div className="relative flex items-center justify-center">
             <input
-              name="confirmPassword"
               type={passwordType}
               placeholder="Confirm Password"
               autoComplete="current-password"
               className="w-full rounded-md bg-white/5 py-3 px-5 text-white/80 placeholder-white/40 outline-none"
-              onChange={onChange}
+              {...register("confirmPassword", {
+                required: true,
+                validate: (val: string) => {
+                  if (watch("password") != val) {
+                    return "Your passwords do no match";
+                  }
+                },
+              })}
             />
             {passwordType === "password" ? (
               <AiFillEye
@@ -146,7 +139,7 @@ function Signup() {
             )}
           </div>
           <p className="text-red-500">
-            {formError ||
+            {errors.confirmPassword?.message ||
               FIREBASE_ERRORS[
                 authError?.message as keyof typeof FIREBASE_ERRORS
               ]}
