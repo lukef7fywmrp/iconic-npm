@@ -39,12 +39,12 @@ function Header() {
               }`}
             >
               {/* FIXED THIS BUG */}
-              {/* <Image
+              <Image
                 className="rounded-full"
                 src="/logo2.png"
                 objectFit="contain"
                 layout="fill"
-              /> */}
+              />
             </div>
             <p className="bg-gradient-to-tr bg-clip-text font-britney text-xl tracking-wide text-white/80">
               Stardust
