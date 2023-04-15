@@ -35,7 +35,7 @@ function Header() {
           <div className="flex cursor-pointer items-center space-x-2 transition-transform duration-300  ease-out hover:scale-105">
             <div
               className={`relative h-12 w-12 ${
-                show && "animate-spin hue-rotate-90"
+                show && "animate-spin hue-rotate-180"
               }`}
             >
               {/* FIXED THIS BUG */}
@@ -54,7 +54,7 @@ function Header() {
         {/* Header links and menu */}
         <div className="flex items-center">
           <div className="hidden sm:flex">
-            <Link href="/">
+            <Link href="/pricing">
               <p className="headerLink">Pricing</p>
             </Link>
             <Link href="/">

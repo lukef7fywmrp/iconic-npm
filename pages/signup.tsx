@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FiChevronRight } from "react-icons/fi";
 import Header from "../components/Header";
-
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";

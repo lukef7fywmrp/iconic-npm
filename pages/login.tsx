@@ -61,7 +61,8 @@ function Login() {
       </Head>
       <Header />
       {/* Gradient Background */}
-      <img className="absolute top-0 w-full" src="/gradientbg01.png" alt="" />
+      {/* added image */}
+      {/* <img className="absolute top-0 w-full" src="/gradientbg01.png" alt="" /> */}
       <div className="bg-gradient-to-r from-black via-[#0a0a0a] p-[1px]"></div>
       <main className="z-10 mx-auto flex w-full flex-1 flex-col items-center justify-center space-y-5  ">
         {/* Title */}
