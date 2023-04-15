@@ -68,10 +68,10 @@ function LibraryPage({ library }: Props) {
                   <div className="h-6 border-[0.5px] border-white/20"></div>
                   {/* Upvotes */}
                   <button className="flex items-center rounded-md border border-white/20">
-                    <div className="rounded-l-[7px] px-2 text-2xl text-white/50 transition duration-300 hover:bg-white/10 hover:text-white/90">
+                    <div className="rounded-l-[7px] px-2 py-1 text-2xl text-white/50 transition duration-300 hover:bg-white/10 hover:text-white/90">
                       <RiArrowUpSFill />
                     </div>
-                    <p className="border-l border-white/20 py-1 px-3 text-white/90">
+                    <p className="border-l border-white/20 px-3 py-1 text-white/90">
                       150
                     </p>
                   </button>

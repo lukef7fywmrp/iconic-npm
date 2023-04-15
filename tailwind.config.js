@@ -16,6 +16,7 @@ module.exports = {
       britney: ["britney", "sans-serif;"],
       chillax: ["chillax", "sans-serif"],
       satoshi: ["satoshi", "sans-serif"],
+      roboto: ["roboto", "sans-serif"],
     },
     extend: {
       backgroundImage: {
